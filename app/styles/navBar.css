@@ -1,0 +1,59 @@
+
+nav a {
+   margin: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    color: white;
+}
+
+
+header .navBtn{
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: black;
+    transition: 1s;
+    transform: translateY(-100vh);
+}
+
+header .navBarContainer{
+    transform: none;
+}
+
+header .navBtn {
+    display: inline;
+    opacity: 1;
+}
+
+nav .closeBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+}
+

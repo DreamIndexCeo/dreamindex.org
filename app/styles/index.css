@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+    background-color: black;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+button {
+    background: none; 
+    border: none;
+    outline: none;
+}
+
+.hero {
+    position: relative;
+}
+
+section {
+    padding: 100px 10vw;
+}
+
+.services {
+    background-color: #111111;
+}
+.websiteProcess{
+    background-color: #D9D9D9;
+}
+.dreamsite {
+    background-color: #D2D2D2;
+}
+.dica{
+    background-color: #111111;
+}
