@@ -11,19 +11,35 @@ export const meta = () => {
 
 export default function Index() {
   return (
-    <div>
-      <div className="hero"> 
-        <NavBar />
+   <body>
+      <NavBar />
+
+      <div className="hero">   
         <section>
-          <h1>section 1</h1>
+
+          <div>
+            <h1>Dream Index</h1>
+            <p>The Business that will help all types of up and coming businesses build their online presence or advance it, using services like web and logo design, hosting and marketing software</p>
+          </div>
+
+         <div>
+         </div>
+
         </section>
          <BubbleCurve color='#111111' />
       </div>
      
-     <div>
+     
       <section className="services">
         <div>
-          <h1>Row</h1>
+          <h3>Coding</h3>
+          <p>The Business that will help all types of up and coming</p>
+        
+          <h3>Startup</h3>
+          <p>The Business that will help all types of up and coming</p>
+        
+          <h3>Server</h3>
+          <p>The Business that will help all types of up and coming</p>
         </div>
         <div>
           <h1>Services</h1>
@@ -33,12 +49,11 @@ export default function Index() {
         </div>
         <BubbleCurve color='#D9D9D9' />
       </section>
-     
-    </div>
+   
 
     <section className="websiteProcess">
         <div>
-          <h1>section 3</h1>
+          <h1>Website Creation Made Easy</h1>
         </div>
         <div>
           <h1>section 3</h1>
@@ -50,25 +65,46 @@ export default function Index() {
         <h1>section 4</h1>
       </div>
       <div>
-        <h1>section 4</h1>
+        <h1>DreamSite</h1>
+        <p>The Convenient web editor to your Dream Site. Be able to make any changes to your website's Content, Color Scheme, and Prices</p>
+        <h4>Available for Desktop, IOS, and Android</h4>
+        <p>(depending on your hosting plan)</p>
       </div>  
-      <BottomBookCurve />
+      <BottomBookCurve color='#111111' />
     </section>
 
-       <section className="dica">
+    <section className="dica">
+      <h1>D.I.C.A</h1>
+      <div>
+        <h2>Row with Arrows</h2>
+      </div>
         <div>
-          <h1>section 5</h1>
+          <h2>Capture</h2>
+          <p>Capture leads using our landing pages, surveys, forms, calendars, inbound phone system & more!</p>
+          
+          <h2>Nurture</h2>
+          <p>Automatically message leads via voicemail, forced calls, SMS, emails, FB Messenger & more!</p>
+        
+          <h2>Close</h2>
+          <p>Use our built in tools to collect payments, schedule appointments, and track analytics!</p>
+        
         </div>
+        <button>View Plan</button>
+
         <div>
-          <h1>section 5</h1>
+          <h2>You think & We Create</h2>
+          <p>The Convenient web editor to your dream site. Be able to make any chances to you website’s Content, Color Scheme, and Prices. Availably for Desktop, IOS & Android!!! (depending on your hosting plan)</p>
         </div> 
+        <button>Contact</button>
         <div>
-          <h1>section 5</h1>
+          <h2>Our Recent Work</h2>
+          <p>Carousel</p>
+          <button>View More</button>
         </div>    
-        <TopBookCurve />  
-      </section>
+        <TopBookCurve color='#D2D2D2' />  
+    </section>
       
-    </div>
+   </body>
    
   );
 

@@ -10,8 +10,8 @@
 .bottomBookCurve svg {
     position: relative;
     display: block;
-    width: calc(200% + 1.3px);
-    height: 100px;
+    width: calc(199% + 1.3px);
+    height: 111px;
 }
 
 .bottomBookCurve .shape-fill {

@@ -37,8 +37,8 @@ header nav {
     justify-content: center;
     gap: 1.5rem;
     background-color: black;
-    transition: 1s;
     transform: translateY(-100vh);
+    z-index: 1;
 }
 
 header .navBarContainer{
