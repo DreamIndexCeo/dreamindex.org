@@ -1,0 +1,19 @@
+.bottomBookCurve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.bottomBookCurve svg {
+    position: relative;
+    display: block;
+    width: calc(200% + 1.3px);
+    height: 100px;
+}
+
+.bottomBookCurve .shape-fill {
+    fill: #FFFFFF;
+}

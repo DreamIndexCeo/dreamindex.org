@@ -26,13 +26,17 @@ section {
 
 .services {
     background-color: #111111;
+    position: relative;
 }
 .websiteProcess{
     background-color: #D9D9D9;
+    position: relative;
 }
 .dreamsite {
     background-color: #D2D2D2;
+    position: relative;
 }
 .dica{
     background-color: #111111;
+    position: relative;
 }
