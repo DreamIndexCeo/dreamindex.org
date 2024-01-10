@@ -1,13 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-off-black: #111111;
+    --color-light-grey: #D9D9D9;
+    --color-grey: #D2D2D2;
+    --font-inter: 'Inter',
+        sans-serif;
+    --font-rubik-glitch: 'Rubik Glitch', system-ui;
+    --font-rubik-moonrocks: 'Rubik Moonrocks', sans-serif;
+    --font-cutive-mono: 'Cutive Mono', monospace;
+    --font-codystar: 'Codystar',
+        sans-serif;
+}
 body{
-    background-color: black;
+    background-color: var(--color-black);
 }
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    color: white;
+    font-family: var(--font-inter);
+    color: var(--color-white);
 }
 
 button {
@@ -15,6 +32,43 @@ button {
     border: none;
     outline: none;
 }
+
+.rubikGlitchHeader {
+    font-size: 52px;
+    font-weight: 100;
+    font-family: var(--font-rubik-glitch);
+}
+
+
+.rubikGlitchSubtitle {
+    font-size: 32px;
+    font-weight: 100;
+    font-family: var(--font-rubik-glitch);
+}
+
+
+.rubikGlitchParagraph {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: var(--font-rubik-glitch);
+}
+
+.cultiveBiggerParagraph {
+    font-size: 23px;
+    font-weight: 700;
+    font-family: var(--font-cutive-mono);
+}
+
+.moonRocksHeader {
+    font-size: 70px;
+    font-family: var(--font-rubik-moonrocks);
+}
+
+.codyStartHeader {
+    font-size: 32px;
+    font-family: var(--font-codystar);
+}
+
 
 .hero {
     position: relative;
@@ -24,19 +78,37 @@ section {
     padding: 100px 10vw;
 }
 
+.rowContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2em;
+}
+
+.columnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+    align-items: center;
+}
+
 .services {
-    background-color: #111111;
+    background-color: var(--color-off-black);
     position: relative;
 }
+
 .websiteProcess{
-    background-color: #D9D9D9;
+    background-color: var(--color-light-grey);
     position: relative;
 }
 .dreamsite {
-    background-color: #D2D2D2;
+    background-color: var(--color-grey);
     position: relative;
 }
 .dica{
-    background-color: #111111;
+    background-color: var(--color-black);
     position: relative;
+    gap: 2em;
 }

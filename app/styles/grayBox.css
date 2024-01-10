@@ -1,0 +1,42 @@
+.grayBox, .dynamicGrayBox {
+    width: 200px;
+    height: 200px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dynamicGrayBox {
+    background-color: #3F3E3E; 
+}
+
+.grayBox {
+    background-color: #D0CFCF;
+    box-shadow: 5px 10px 9px -3px gray;
+}
+
+.codyStartSubtitle {
+    font-size: 28px;
+    font-family: var(--font-codystar);
+}
+
+.codyStartParagraph {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: var(--font-codystar);
+}
+
+.columnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cutiveParagraph {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-cutive-mono);
+}

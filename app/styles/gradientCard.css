@@ -1,0 +1,27 @@
+.gradientCard{
+    min-width: 250px;
+    min-height: 350px;
+    background-color: #3F3E3E;
+    position: relative;
+}
+
+.gradientCard::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background-image: linear-gradient(45deg,
+                hsl(286deg 71% 60%) 0%,
+                hsl(269deg 84% 68%) 61%,
+                hsl(252deg 98% 74%) 75%,
+                hsl(234deg 100% 75%) 82%,
+                hsl(220deg 100% 71%) 86%,
+                hsl(212deg 100% 67%) 88%,
+                hsl(206deg 100% 65%) 91%,
+                hsl(203deg 100% 66%) 94%,
+                hsl(201deg 96% 67%) 97%,
+                hsl(199deg 87% 70%) 100%);
+    filter: blur(0px);
+    transform: translate3d(8px, 7px, -1px);
+    clip-path: polygon(-100vmax -100vmax, 100vmax -100vmax, 100vmax 100vmax, -100vmax 100vmax, -100vmax -100vmax, calc(0px - 8px) calc(0px - 7px), calc(0px - 8px) calc(100% - 7px - 0px), calc(100% - 8px - 0px) calc(100% - 7px - 0px), calc(100% - 8px - 0px) calc(0px - 7px), calc(0px - 8px) calc(0px - 7px));
+    pointer-events: none;
+}
