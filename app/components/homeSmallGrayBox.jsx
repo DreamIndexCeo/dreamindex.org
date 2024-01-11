@@ -1,9 +1,9 @@
 import styles from "../styles/grayBox.css"
 
-export default function GrayBox({paragraph}) {
+export default function GrayBox({paragraph, src}) {
     return (
         <div className="grayBox">
-            <img src="" alt="imageIcon" />
+            <img src={src} alt="imageIcon" />
             <p className="cutiveParagraph">{paragraph}</p>
         </div>
     );

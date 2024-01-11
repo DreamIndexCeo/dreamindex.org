@@ -18,21 +18,23 @@
     box-shadow: 5px 10px 9px -3px gray;
 }
 
+.grayBoxColumnContainer {
+    display: flex;
+    gap: 1em;
+}
+
+.grayBox img {
+    width: 70px;
+}
 .codyStartSubtitle {
-    font-size: 28px;
+    font-size: 20px;
     font-family: var(--font-codystar);
 }
 
 .codyStartParagraph {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
     font-family: var(--font-codystar);
-}
-
-.columnContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .cutiveParagraph {

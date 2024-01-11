@@ -12,7 +12,7 @@ export default function NavBar() {
     return(
         <header>
             <div>
-                <h3>Logo Here</h3>
+                <img src='./imgs/white_logo.png' />
             </div>
             
             <nav ref={navRef}>

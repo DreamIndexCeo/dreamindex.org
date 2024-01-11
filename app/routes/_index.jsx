@@ -35,16 +35,19 @@ export default function Index() {
       <section className="services columnContainer">
         <div className="rowContainer">
           <div className="columnContainer">
+            <img src='./imgs/coding.png' />
               <h3>Coding</h3>
               <p className="rubikGlitchParagraph">The Business that will help all types of up and coming</p>
           </div>
           
         <div className="columnContainer">
+          <img src='' alt="startup" />
            <h3>Startup</h3>
            <p className="rubikGlitchParagraph">The Business that will help all types of up and coming</p>
         </div>
          
          <div className="columnContainer">
+          <img src='./imgs/server.png'  />
           <h3>Server</h3>
           <p className="rubikGlitchParagraph">The Business that will help all types of up and coming</p>
          </div>
@@ -68,8 +71,8 @@ export default function Index() {
           </div>
         </div>
 
-        <div>
-          <h1>Astronaut</h1>     
+        <div style={{display:'flex', justifyContent:'center'}}> 
+          <img style={{width:'70%'}} src='./imgs/astronaut.png' />     
         </div>
         <BubbleCurve color='var(--color-light-grey)' />
       </section>
@@ -80,40 +83,41 @@ export default function Index() {
 
           <div className="rowContainer">
             <div>
-              <GrayBox paragraph={"Invision & Discuss your Dream Site"} />
+              <GrayBox src={'./imgs/explanation.png'} paragraph={"Invision & Discuss your Dream Site"} />
             </div>
             <div>
-              <GrayBox paragraph={"Invision & Discuss your Dream Site"} />
+              <GrayBox src={'./imgs/illustration.png'} paragraph={"Invision & Discuss your Dream Site"} />
             </div>
             <div>
-             <GrayBox paragraph={"Invision & Discuss your Dream Site"} />
+             <GrayBox src={'./imgs/programming.png'} paragraph={"Invision & Discuss your Dream Site"} />
             </div>
           </div>
 
           <div className="rowContainer">
             <div>
-              <GrayBox paragraph={"Invision & Discuss your Dream Site"} />
+              <GrayBox src={'./imgs/hosting.png'} paragraph={"Invision & Discuss your Dream Site"} />
             </div>
             <div>
-              <GrayBox paragraph={"Invision & Discuss your Dream Site"} />
+              <GrayBox src={'./imgs/world_grid.png'} paragraph={"Invision & Discuss your Dream Site"} />
             </div>
             <div>
-             <GrayBox paragraph={"Invision & Discuss your Dream Site"} />
+             <GrayBox src={'./imgs/smartphone.png'} paragraph={"Invision & Discuss your Dream Site"} />
             </div>
           </div>
 
         </div>
       </section>
 
-    <section className="dreamsite">
+    <section className="dreamsite rowContainer">
       <div>
-        <h1>section 4</h1>
+        <img style={{width:'500px'}} src='./imgs/computer_logo.png'  />
       </div>
-      <div>
-        <h1 className="rubikGlitchHeader">DreamSite</h1>
-        <p className="cultiveBiggerParagraph">The Convenient web editor to your Dream Site. Be able to make any changes to your website's Content, Color Scheme, and Prices</p>
-        <h4 className="cultiveBiggerParagraph" >Available for Desktop, IOS, and Android</h4>
-        <p className="cultiveBiggerParagraph">(depending on your hosting plan)</p>
+      <div style={{width:'500px'}}>
+        <h1 style={{color:'var(--color-black'}} className="rubikGlitchHeader">DreamSite</h1>
+        <p style={{color:'var(--color-black'}} className="cultiveBiggerParagraph">The Convenient web editor to your Dream Site. Be able to make any changes to your website's Content, Color Scheme, and Prices</p>
+        <div style={{height:'35px'}}></div>
+        <h4 style={{color:'var(--color-black'}} className="cultiveBiggerParagraph" >Available for Desktop, IOS, and Android</h4>
+        <p style={{color:'var(--color-black'}} className="cultiveBiggerParagraph">(depending on your hosting plan)</p>
       </div>  
       <BottomBookCurve color='var(--color-black)' />
     </section>
@@ -122,17 +126,23 @@ export default function Index() {
     <section className="dica columnContainer">
         <div className="columnContainer">
           <h1 className="moonRocksHeader">D.I.C.A</h1>
+           <img style={{width:'350px'}} src='./imgs/dica_content.png'  />
           <h1 className="codyStartHeader">Building the Digital Market</h1>
+          <div> 
+            <img src="./imgs/left_curve_arrow.png" />
+            <img src="./imgs/down_arrow.png" />
+             <img src="./imgs/right_curve_arrow.png" />
+          </div>
           <div className="rowContainer">
             
             <div>
-              <DynamicGrayBox color='6px 6px 20px 5px #FE3218' header={'Capture'} paragraph={'Capture leads using our landing pages, surveys, forms, calendars, inbound phone system & more!'} />
+              <DynamicGrayBox src='./imgs/calendar.png' color='6px 6px 20px 5px #FE3218' header={'Capture'} paragraph={'Capture leads using our landing pages, surveys, forms, calendars, inbound phone system & more!'} />
             </div>
             <div>
-              <DynamicGrayBox color='6px 6px 20px 5px #C152E2' header={'Nurture'} paragraph={'Automatically message leads via voicemail, forced calls, SMS, emails, FB Messenger & more!'} />
+              <DynamicGrayBox src='./imgs/comments.png' color='6px 6px 20px 5px #C152E2' header={'Nurture'} paragraph={'Automatically message leads via voicemail, forced calls, SMS, emails, FB Messenger & more!'} />
             </div>
             <div>
-             <DynamicGrayBox color='6px 6px 20px 5px #6ECBF5' header={'Close'} paragraph={'Use our built in tools to collect payments, schedule appointments, and track analytics!'} />
+             <DynamicGrayBox src='./imgs/secure_payment.png' color='6px 6px 20px 5px #6ECBF5' header={'Close'} paragraph={'Use our built in tools to collect payments, schedule appointments, and track analytics!'} />
             </div>
           </div>
 
