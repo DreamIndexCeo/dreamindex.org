@@ -1,0 +1,20 @@
+body {
+    background-color: var(--color-black);
+    
+}
+
+
+h1 {
+    font-size: 3em;
+    font-family: var(--font-rowdies);
+    font-weight: 900;
+    background: linear-gradient(to left, #E252D8 0%, #6ECBF5 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-family: var(--font-rowdies);
+    font-weight: 900;
+}

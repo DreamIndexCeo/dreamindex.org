@@ -13,8 +13,8 @@ export const meta = () => {
 
 export default function Index() {
   return (
-   <body>
-      <NavBar />
+   <body style={{backgroundColor: 'var(--color-black'}}>
+      <NavBar navTextColor='whiteText' />
 
       <div className="hero">   
         <section>
@@ -41,7 +41,7 @@ export default function Index() {
           </div>
           
         <div className="columnContainer">
-          <img src='' alt="startup" />
+          <img src='./imgs/startup.png' alt="startup" />
            <h3>Startup</h3>
            <p className="rubikGlitchParagraph">The Business that will help all types of up and coming</p>
         </div>

@@ -1,5 +1,6 @@
 import styles from '../styles/navBar.css'
 
+import { Link } from '@remix-run/react'
 import { useRef } from "react";
 import {FaBars, FaTimes, FaUser} from "react-icons/fa/index.js"
 
@@ -12,20 +13,27 @@ export default function NavBar() {
     return(
         <header>
             <div>
-                <img src='./imgs/white_logo.png' />
+                <Link Link to='/' ><img src='./imgs/white_logo.png' /> </Link>
             </div>
             
             <nav ref={navRef}>
-                <a>Services</a>
-                <a>Hosting</a>
-                <a>About Us</a>
-                <a>Contact</a>
-                <a><FaUser />Sign In</a>
-                <button className="navBtn closeBtn" onClick={showNavBar}>
+                <div>
+                    <Link to='/services'>Services</Link>
+                    <Link to='/hosting'>Hosting</Link>
+                    <Link to='/about_us'>About Us</Link>
+                    <Link to='/contact_us'>Contact</Link>
+                </div>
+                 <div>
+                    <a><FaUser color='red' />Sign In</a>
+                    <button className="navBtn closeBtn" onClick={showNavBar}>
                     <FaTimes/>
-                </button>
+                    </button>
+                </div>
             </nav>
-            <button className="navBtn" onClick={showNavBar}>
+               
+                
+                
+            <button className="navBtn openBtn" onClick={showNavBar}>
                 <FaBars/>
             </button>
         </header>

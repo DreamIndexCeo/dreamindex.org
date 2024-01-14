@@ -1,8 +1,13 @@
 
 nav a {
-   margin: 8px;
+    margin: 16px;
     text-decoration: none;
     color: white;
+    font-weight: 800;
+    background: linear-gradient(to bottom, #E252D8 0%, #6ECBF5 100%);
+    -webkit-background-clip: text;
+        background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header{
@@ -13,6 +18,11 @@ header{
     color: white;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 39em;
+}
 
 header .navBtn{
     cursor: pointer;
@@ -23,7 +33,7 @@ header .navBtn{
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1500px) {
 
 header nav {
     position: fixed;
@@ -41,6 +51,11 @@ header nav {
     z-index: 1;
 }
 
+nav div {
+    display: flex;
+    flex-direction: column;
+}
+
 header .navBarContainer{
     transform: none;
 }
@@ -50,7 +65,7 @@ header .navBtn {
     opacity: 1;
 }
 
-nav .closeBtn {
+nav .closeBtn{
     position: absolute;
     top: 2rem;
     right: 2rem;

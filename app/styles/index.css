@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
 :root {
     --color-white: #ffffff;
     --color-black: #000000;
@@ -16,10 +17,12 @@
     --font-cutive-mono: 'Cutive Mono', monospace;
     --font-codystar: 'Codystar',
         sans-serif;
+    --font-rowdies: 'Rowdies',
+        sans-serif;
 }
-body{
+/* body{
     background-color: var(--color-black);
-}
+} */
 * {
     padding: 0;
     margin: 0;
