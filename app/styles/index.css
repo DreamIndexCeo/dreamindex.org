@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 :root {
     --color-navy-blue: #111827;
@@ -25,11 +26,11 @@
     --font-rowdies: 'Rowdies',
         sans-serif;
     --font-roboto: 'Roboto', sans-serif;
+    --font-righteous: 'Righteous',
+        sans-serif;
     
 }
-/* body{
-    background-color: var(--color-black);
-} */
+
 * {
     padding: 0;
     margin: 0;

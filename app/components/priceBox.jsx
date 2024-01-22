@@ -1,4 +1,5 @@
 import styles from "../styles/priceBox.css";
+import { Link } from "@remix-run/react";
 import { FaCheckCircle } from "react-icons/fa/index.js";
 export default function PriceBox({
   label,
@@ -27,7 +28,7 @@ export default function PriceBox({
         </li>
       </ul>
       <button>
-        <p>Get Started</p>
+        <Link to="/deposit">Get Started</Link>
       </button>
     </div>
   );
