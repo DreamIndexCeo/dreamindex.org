@@ -43,6 +43,20 @@ button {
     outline: none;
 }
 
+.starryBackground {
+    background-image: url('/imgs/starry_background.png');
+    background-repeat: no-repeat;
+}
+
+.astronaut {
+    width: 50%;
+    padding: 400px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/imgs/astronaut.png');
+}
+
 .rubikGlitchHeader {
     font-size: 52px;
     font-weight: 100;
