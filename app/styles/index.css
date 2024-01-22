@@ -4,10 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
+    --color-navy-blue: #111827;
+    --color-bright-purple: #C152E2;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-off-black: #111111;
+    --color-dark-grey: #212121;
     --color-light-grey: #D9D9D9;
     --color-grey: #D2D2D2;
     --font-inter: 'Inter',
@@ -19,6 +24,8 @@
         sans-serif;
     --font-rowdies: 'Rowdies',
         sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    
 }
 /* body{
     background-color: var(--color-black);

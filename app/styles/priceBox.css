@@ -1,0 +1,41 @@
+.priceBox, .priceBox p, .priceBox li{
+font-family: var(--font-roboto);
+}
+
+
+.priceBox{
+    background-color: var(--color-navy-blue);
+    border-radius: 5px;
+    color: white;
+    width: 300px;
+    height: 350px;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    padding: 16px;
+}
+
+
+.priceBox p, .priceBox li {
+    color: var(--color-grey);
+    font-weight: 200;
+}
+
+.priceBox p {
+    line-height: 20pt;
+}
+.priceBox li {
+    display: flex;
+    gap: 0.5em;
+    padding: 8px 0px;
+}
+
+.priceBox button{
+    background-color: var(--color-bright-purple);
+    border-radius: 5px;
+    padding: 12px;
+}
+.priceBox button p{ 
+   color: var(--color-navy-blue);
+   font-weight: 700;
+}

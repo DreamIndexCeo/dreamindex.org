@@ -14,7 +14,7 @@ export const meta = () => {
 export default function Index() {
   return (
    <body style={{backgroundColor: 'var(--color-black'}}>
-      <NavBar navTextColor='whiteText' />
+      <NavBar />
 
       <div className="hero">   
         <section>

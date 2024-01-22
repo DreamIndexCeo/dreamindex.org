@@ -1,3 +1,89 @@
+
+
 body {
+    background-color: var(--color-light-grey);
+}
+
+.gradientTitle {
+    font-size: 3em;
+    font-family: var(--font-rowdies);
+    font-weight: 900;
+    background: linear-gradient(to left, #E252D8 0%, #6ECBF5 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hostingOptions {
     background-color: var(--color-grey);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-around;
+    gap: 1em
+}
+
+.hostingOptions div {
+    background-color: var(--color-white);
+    width: 300px;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+}
+.hostingOptions h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.hostingOptions .price{
+    font-size: 25px;
+    margin: 0.5em;
+}
+
+p, .hostingOptions h3,  .hostingOptions li  {
+    color: var(--color-black);
+    list-style: none;
+    font-family: var(--font-rowdies);
+}
+.hostingOptions li {
+    font-weight: 500;
+}
+.planList {
+    margin: 2em 1em;
+}
+.hostingOptions p {
+    font-weight: 700;
+}
+
+.basic {
+    box-shadow: 5px 10px #6ECBF5;
+}
+
+.advance {
+    box-shadow: 5px 10px #C152E2;
+    height: 400px;
+}
+
+.master {
+    box-shadow: 5px 10px #866EE7;
+    height: 600px;
+}
+.corporation {
+    box-shadow: 5px 10px #2CCA91;
+    height: 800px;
+}
+
+.blueDiv {
+    background-color: #6ECBF5;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.blueDiv h1 {
+    font-family: var(--font-rowdies);
+    color: #C152E2;
 }
