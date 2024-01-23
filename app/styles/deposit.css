@@ -10,12 +10,32 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.depositContainer .pls,
+.smallDivider {
+  background-color: var(--color-black);
+  width: 90px;
+  padding: 1px;
+  margin: 1em;
+}
+
 .depositContainer p,
 .depositContainer li {
   color: var(--color-black);
   font-family: var(--font-righteous);
   list-style: none;
+}
+
+.depositContainer p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.depositList {
+  display: flex;
+  gap: 1em;
+}
+
+.howdYouFindUS {
+  padding: 16px;
 }
 
 .depositContainer li {
@@ -45,14 +65,13 @@ input[type="checkbox"]:checked:after {
   font-size: 32px;
 }
 
-.depositContainer .pls {
-  font-size: 24px;
+button {
+  background-color: var(--color-black);
+  padding: 16px;
 }
 
 .depositContainer {
   background-color: var(--color-light-grey);
   padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: fit-content;
 }

@@ -1,145 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 :root {
-    --color-navy-blue: #111827;
-    --color-bright-purple: #C152E2;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-off-black: #111111;
-    --color-dark-grey: #212121;
-    --color-light-grey: #D9D9D9;
-    --color-grey: #D2D2D2;
-    --font-inter: 'Inter',
-        sans-serif;
-    --font-rubik-glitch: 'Rubik Glitch', system-ui;
-    --font-rubik-moonrocks: 'Rubik Moonrocks', sans-serif;
-    --font-cutive-mono: 'Cutive Mono', monospace;
-    --font-codystar: 'Codystar',
-        sans-serif;
-    --font-rowdies: 'Rowdies',
-        sans-serif;
-    --font-roboto: 'Roboto', sans-serif;
-    --font-righteous: 'Righteous',
-        sans-serif;
-    
+  --color-navy-blue: #111827;
+  --color-bright-purple: #c152e2;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-off-black: #111111;
+  --color-dark-grey: #212121;
+  --color-light-grey: #d9d9d9;
+  --color-grey: #d2d2d2;
+  --font-inter: "Inter", sans-serif;
+  --font-rubik-glitch: "Rubik Glitch", system-ui;
+  --font-rubik-moonrocks: "Rubik Moonrocks", sans-serif;
+  --font-cutive-mono: "Cutive Mono", monospace;
+  --font-codystar: "Codystar", sans-serif;
+  --font-rowdies: "Rowdies", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-righteous: "Righteous", sans-serif;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: var(--font-inter);
-    color: var(--color-white);
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  color: var(--color-white);
 }
 
 button {
-    background: none; 
-    border: none;
-    outline: none;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .starryBackground {
-    background-image: url('/imgs/starry_background.png');
-    background-repeat: no-repeat;
+  background-image: url("/imgs/starry_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .astronaut {
-    width: 50%;
-    padding: 400px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('/imgs/astronaut.png');
+  width: 50%;
+  padding: 400px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/imgs/astronaut.png");
 }
 
 .rubikGlitchHeader {
-    font-size: 52px;
-    font-weight: 100;
-    font-family: var(--font-rubik-glitch);
+  font-size: 52px;
+  font-weight: 100;
+  font-family: var(--font-rubik-glitch);
 }
-
 
 .rubikGlitchSubtitle {
-    font-size: 32px;
-    font-weight: 100;
-    font-family: var(--font-rubik-glitch);
+  font-size: 32px;
+  font-weight: 100;
+  font-family: var(--font-rubik-glitch);
 }
 
-
 .rubikGlitchParagraph {
-    font-size: 15px;
-    font-weight: 100;
-    font-family: var(--font-rubik-glitch);
+  font-size: 15px;
+  font-weight: 100;
+  font-family: var(--font-rubik-glitch);
 }
 
 .cultiveBiggerParagraph {
-    font-size: 23px;
-    font-weight: 700;
-    font-family: var(--font-cutive-mono);
+  font-size: 23px;
+  font-weight: 700;
+  font-family: var(--font-cutive-mono);
 }
 
 .moonRocksHeader {
-    font-size: 70px;
-    font-family: var(--font-rubik-moonrocks);
+  font-size: 70px;
+  font-family: var(--font-rubik-moonrocks);
 }
 
 .codyStartHeader {
-    font-size: 32px;
-    font-family: var(--font-codystar);
+  font-size: 32px;
+  font-family: var(--font-codystar);
 }
 
-
 .hero {
-    position: relative;
+  position: relative;
 }
 
 section {
-    padding: 100px 10vw;
+  padding: 100px 10vw;
 }
 
 .rowContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
 }
 
 .columnContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2em;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: center;
 }
 
 .services {
-    background-color: var(--color-off-black);
-    position: relative;
+  background-color: var(--color-off-black);
+  position: relative;
 }
 
-.websiteProcess{
-    background-color: var(--color-light-grey);
-    position: relative;
+.websiteProcess {
+  background-color: var(--color-light-grey);
+  position: relative;
 }
 .dreamsite {
-    background-color: var(--color-grey);
-    position: relative;
-    text-align: right;
-    color: var(--color-black);
+  background-color: var(--color-grey);
+  position: relative;
+  text-align: right;
+  color: var(--color-black);
 }
-.dica{
-    background-color: var(--color-black);
-    position: relative;
-    gap: 2em;
+.dica {
+  background-color: var(--color-black);
+  position: relative;
+  gap: 2em;
 }
 
 .dica img {
-    padding: 0px 30px;
+  padding: 0px 30px;
 }

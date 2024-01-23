@@ -21,50 +21,72 @@ export default function Services() {
           <p> more flexibility</p>
         </div>
       </section>
+
       <div className="starryBackground">
-        <section className="businessMeeting">
-          <p>
-            After Paying the Commission, you'll be able to fill out a
-            consolation form to give up front information about your vision.
-          </p>
-          <p>
-            From there you'll be able to book the next available meeting date to
-            have a virtual meeting to discuss the final details before the
-            designing begins.
-          </p>
+        <section className="gifParagraphContainer">
+          <div>
+            <img src="./imgs/gifs/business_meetings.gif" />
+          </div>
+          <div className="businessMeeting">
+            <p>
+              After Paying the Commission, you'll be able to fill out a
+              consolation form to give up front information about your vision.
+            </p>
+            <p>
+              From there you'll be able to book the next available meeting date
+              to have a virtual meeting to discuss the final details before the
+              designing begins.
+            </p>
+          </div>
         </section>
-        <section className="time">
-          <p>
-            The development process can take anywhere from 2 to 5 weeks
-            depending on your type of site.
-          </p>
-          <p>
-            During this waiting time you'll be getting updates and designs
-            concept from us to approve to your liking. So you can continue to
-            working hard on your business' ideas while we handle all your
-            website and designing problems.
-          </p>
+        <div style={{ textAlign: "center" }}>
+          <img src="./imgs/line_one.png" />
+        </div>
+        <section className="gifParagraphContainer">
+          <div className="time">
+            <p>
+              The development process can take anywhere from 2 to 5 weeks
+              depending on your type of site.
+            </p>
+            <p>
+              During this waiting time you'll be getting updates and designs
+              concept from us to approve to your liking. So you can continue to
+              working hard on your business' ideas while we handle all your
+              website and designing problems.
+            </p>
+          </div>
+          <div>
+            <img src="./imgs/gifs/time.gif" />
+          </div>
         </section>
-        <section className="interface">
-          <p>
-            Once you website is completely ready, signed off and hosting plan is
-            made, you'll get a login from us to access your Cloud Portal.
-          </p>
-          <p>The Cloud Portal includes:</p>
-          <p>
-            <ul>
-              <li>Website Manager,</li>
-              <li>Dashboard Analytics,</li>
-              <li>Web Editor,</li>
-              <li>Subscription Manager,</li>
-              <li>Appointment Manager,</li>
-            </ul>
-          </p>
+        <div style={{ textAlign: "center" }}>
+          <img src="./imgs/line_two.png" />
+        </div>
+        <section className="gifParagraphContainer">
+          <div>
+            <img src="./imgs/gifs/interface.gif" />
+          </div>
+          <div className="interface">
+            <p>
+              Once you website is completely ready, signed off and hosting plan
+              is made, you'll get a login from us to access your Cloud Portal.
+            </p>
+            <p>The Cloud Portal includes:</p>
+            <p>
+              <ul>
+                <li>Website Manager,</li>
+                <li>Dashboard Analytics,</li>
+                <li>Web Editor,</li>
+                <li>Subscription Manager,</li>
+                <li>Appointment Manager,</li>
+              </ul>
+            </p>
+          </div>
         </section>
       </div>
 
-      <div className="priceRow rowContainer">
-        <section>
+      <div className="priceRow">
+        <section className="rowContainer">
           <PriceBox
             label={"Contacting"}
             price={"500"}

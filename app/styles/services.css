@@ -1,63 +1,63 @@
 body {
-    background-color: var(--color-black);
-    
+  background-color: var(--color-black);
 }
 
-
 h1 {
-    font-size: 3em;
-    font-family: var(--font-rowdies);
-    font-weight: 900;
-    background: linear-gradient(to left, #E252D8 0%, #6ECBF5 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 3em;
+  font-family: var(--font-rowdies);
+  font-weight: 900;
+  background: linear-gradient(to left, #e252d8 0%, #6ecbf5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p {
-    font-family: var(--font-rowdies);
-    font-weight: 900;
+  font-family: var(--font-rowdies);
+  font-weight: 900;
 }
 ul {
-    list-style: none;
-
+  list-style: none;
 }
 
 li {
-    font-family: var(--font-rowdies);
+  font-family: var(--font-rowdies);
 }
 
 .flexParagraph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.businessMeeting, 
+.gifParagraphContainer {
+  display: flex;
+  align-items: center;
+}
+
+.businessMeeting,
 .time,
 .interface {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
-.businessMeeting, .interface {
-    text-align: left;
+.businessMeeting,
+.interface {
+  text-align: left;
 }
 .time {
-    text-align: right;
+  text-align: right;
 }
 .priceRow {
-    background-color: var( --color-dark-grey);
-    position: relative;
+  background-color: var(--color-dark-grey);
+  position: relative;
 }
 
-
-
-@media only screen and (max-width: 1500px) { 
-.flexParagraph {
-      
-        justify-content: start;
-        align-items: start;
-}
+@media only screen and (max-width: 1500px) {
+  .flexParagraph {
+    justify-content: start;
+    align-items: start;
+  }
 }

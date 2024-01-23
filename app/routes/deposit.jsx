@@ -11,15 +11,19 @@ export default function Deposit() {
 
         <section>
           <div className="depositContainer">
-            <p className="pls">Deposit Fee</p>
-            <p>$150</p>
-            <p style={{ textAlign: "center" }}>
-              To begin the website creation we need to take a Deposit, that will
-              be subtracted from the final price.
-            </p>
-            <div>
-              <p>How did you find us ?</p>
-              <div className="rowContainer">
+            <div className="columnContainer">
+              <img src="./imgs/pay_bill.png" />
+              <p style={{ fontSize: "31px" }}>Deposit Fee</p>
+              <p>$150</p>
+              <span className="smallDivider"></span>
+              <p className="depositFeeP">
+                To begin the website creation we need to take a Deposit, that
+                will be subtracted from the final price.
+              </p>
+            </div>
+            <div className="howdYouFindUS">
+              <p style={{ textAlign: "left" }}>How did you find us ?</p>
+              <div className="depositList">
                 <ul>
                   <li>
                     <input type="checkbox" />
@@ -60,8 +64,9 @@ export default function Deposit() {
             </div>
           </div>
         </section>
-
-        <button>Pay</button>
+        <section>
+          <button>Pay</button>
+        </section>
       </div>
     </body>
   );
