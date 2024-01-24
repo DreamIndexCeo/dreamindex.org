@@ -12,7 +12,7 @@ export default function Deposit() {
         <section>
           <div className="depositContainer">
             <div className="columnContainer">
-              <img src="./imgs/pay_bill.png" />
+              <img src="./imgs/pay_bill.gif" />
               <p style={{ fontSize: "31px" }}>Deposit Fee</p>
               <p>$150</p>
               <span className="smallDivider"></span>
