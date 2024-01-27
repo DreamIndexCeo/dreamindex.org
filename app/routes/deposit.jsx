@@ -1,5 +1,5 @@
-import NavBar, { links as navBarLinks } from "../components/NavBar";
-import style from "../styles/deposit.css";
+import NavBar, { links as navBarLinks } from "../components/index/NavBar";
+import style from "../styles/services/deposit.css";
 export default function Deposit() {
   return (
     <body>

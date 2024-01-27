@@ -1,4 +1,4 @@
-import styles from './styles/index.css'
+import styles from "./styles/index/index.css";
 import {
   Links,
   LiveReload,
@@ -7,8 +7,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
-
 
 export default function App() {
   return (
@@ -30,5 +28,5 @@ export default function App() {
 }
 
 export function links() {
-  return [{rel: 'stylesheet', href: styles}];
+  return [{ rel: "stylesheet", href: styles }];
 }

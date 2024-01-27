@@ -1,4 +1,4 @@
-import styles from "../styles/priceBox.css";
+import styles from "../../styles/services/priceBox.css";
 import { Link } from "@remix-run/react";
 import { FaCheckCircle } from "react-icons/fa/index.js";
 export default function PriceBox({

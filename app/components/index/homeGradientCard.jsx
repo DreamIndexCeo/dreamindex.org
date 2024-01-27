@@ -1,4 +1,4 @@
-import styles from "../styles/gradientCard.css";
+import styles from "../../styles/index/gradientCard.css";
 
 export default function GraidentCard() {
   return <div className="gradientCard"></div>;

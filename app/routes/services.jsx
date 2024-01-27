@@ -1,7 +1,11 @@
-import NavBar, { links as navBarLinks } from "../components/NavBar";
-import AddOnCard, { links as addOnCardLinks } from "../components/addOnCard";
-import PriceBox, { links as priceBoxLinks } from "../components/priceBox";
-import styles from "../styles/services.css";
+import NavBar, { links as navBarLinks } from "../components/index/NavBar";
+import AddOnCard, {
+  links as addOnCardLinks,
+} from "../components/services/addOnCard";
+import PriceBox, {
+  links as priceBoxLinks,
+} from "../components/services/priceBox";
+import styles from "../styles/services/services.css";
 export const meta = () => {
   return [{ title: "DreamIndex || Services" }];
 };

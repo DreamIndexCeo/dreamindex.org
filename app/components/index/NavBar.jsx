@@ -1,4 +1,4 @@
-import styles from "../styles/navBar.css";
+import styles from "../../styles/index/navBar.css";
 
 import { Link } from "@remix-run/react";
 import { useRef } from "react";

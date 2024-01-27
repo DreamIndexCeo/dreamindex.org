@@ -1,4 +1,4 @@
-import NavBar, { links as navBarLinks } from "../components/NavBar";
+import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import BubbleCurve, {
   links as bubbleCurveLinks,
 } from "../components/svgs/BubbleCurve";
@@ -10,11 +10,13 @@ import BottomBookCurve, {
 } from "../components/svgs/BottomOfBookCurve";
 import GraidentCard, {
   links as gradientCardLinks,
-} from "../components/homeGradientCard";
-import GrayBox, { links as grayBoxLinks } from "../components/homeSmallGrayBox";
+} from "../components/index/homeGradientCard";
+import GrayBox, {
+  links as grayBoxLinks,
+} from "../components/index/homeSmallGrayBox";
 import DynamicGrayBox, {
   links as dynamicGrayBoxLinks,
-} from "../components/homeBigGrayBox";
+} from "../components/index/homeBigGrayBox";
 
 export const meta = () => {
   return [{ title: "DreamIndex" }];

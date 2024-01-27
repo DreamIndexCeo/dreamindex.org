@@ -1,4 +1,4 @@
-import styles from "../styles/addOnCard.css";
+import styles from "../../styles/services/addOnCard.css";
 
 export default function AddOnCard({ addonName, addOnPrice }) {
   return (

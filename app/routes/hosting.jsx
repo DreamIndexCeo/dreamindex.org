@@ -1,5 +1,5 @@
-import NavBar, { links as navBarLinks } from "../components/NavBar";
-import styles from "../styles/hosting.css";
+import NavBar, { links as navBarLinks } from "../components/index/NavBar";
+import styles from "../styles/hosting/hosting.css";
 export const meta = () => {
   return [{ title: "DreamIndex || Services" }];
 };
