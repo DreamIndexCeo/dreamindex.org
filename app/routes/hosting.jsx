@@ -9,18 +9,26 @@ export default function Services() {
     <body>
       <NavBar />
 
-      <section className="columnContainer">
-        <h1 className="gradientTitle">Let your vision reach Millions</h1>
-        <p>
+      <section className="titleContainer">
+        <h1 className="gradientTitle">Let your Vision reach Millions</h1>
+        <p className="subTitle">
           Now offering the first 30 days free for your first Company made
           website
         </p>
+        <label class="switch">
+          <input class="toggle" type="checkbox">
+          <span class="slider"></span>
+          <span class="card-side"></span>
+        </label>
       </section>
 
       <section className="hostingOptions">
-        <div className="basic">
+        <div className="basic priceContainer">
           <h3>BASIC</h3>
-          <h3 className="price">$15/m</h3>
+          <div className="priceRow">
+            <h3 className="price">$15</h3>
+            <h3 className="price2">/m</h3>
+          </div>
           <p className="planList">
             <ul>
               <li>Standard Performance</li>
@@ -32,9 +40,12 @@ export default function Services() {
           </p>
           <p>*Fee $50 for wesbite changes</p>
         </div>
-        <div className="advance">
-          <h3>Advance</h3>
-          <h3 className="price">$35/m</h3>
+        <div className="advance priceContainer">
+          <h3>ADVANCED</h3>
+          <div className="priceRow">
+            <h3 className="price">$35</h3>
+            <h3 className="price2">/m</h3>
+          </div>
           <p className="planList">
             <ul>
               <li>Standard Performance</li>
@@ -48,9 +59,12 @@ export default function Services() {
             </ul>
           </p>
         </div>
-        <div className="master">
-          <h3>Master</h3>
-          <h3 className="price">$60/m</h3>
+        <div className="master priceContainer">
+          <h3>MASTER</h3>
+          <div className="priceRow">
+            <h3 className="price">$60</h3>
+            <h3 className="price2">/m</h3>
+          </div>
           <p className="planList">
             <ul>
               <li>+ Increased Performance</li>
@@ -65,9 +79,12 @@ export default function Services() {
             </ul>
           </p>
         </div>
-        <div className="corporation">
+        <div className="corporation priceContainer">
           <h3>Corporation</h3>
-          <h3 className="price">$/m</h3>
+          <div className="priceRow">
+            <h3 className="price">$???</h3>
+            <h3 className="price2">/m</h3>
+          </div>
         </div>
       </section>
 
