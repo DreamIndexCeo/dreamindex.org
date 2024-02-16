@@ -19,11 +19,10 @@ export default function NavBar() {
       </div>
 
       <nav ref={navRef}>
-        <div>
+        <div style={{ marginRight: "200px" }}>
           <Link to="/services">Services</Link>
           <Link to="/hosting">Hosting</Link>
-          <Link to="/about_us">About Us</Link>
-          <Link to="/contact_us">Contact</Link>
+          <Link to="/client_library">Client Library</Link>
         </div>
         <div>
           <a>
