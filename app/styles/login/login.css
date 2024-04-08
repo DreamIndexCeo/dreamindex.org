@@ -1,0 +1,120 @@
+body {
+  background-color: var(--color-black);
+  background-image: url("/imgs/starry_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: var(--font-rowdies);
+  color: var(--color-white);
+}
+
+.loginButton {
+  background-color: whitesmoke;
+  border-radius: 50px;
+  padding: 16px;
+  width: 50%;
+}
+
+.loginButton h2 {
+  background: linear-gradient(to right, #e252d8 0%, #6ecbf5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.centered {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginContainer {
+  background-color: rgb(77, 72, 72, 0.8);
+  border-radius: 50px;
+  padding: 60px;
+  height: 540px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--color-white);
+  outline: 0;
+  font-size: 17px;
+  color: var(--color-white);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: var(--color-white);
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(
+    45deg,
+    hsl(286deg 71% 60%) 0%,
+    hsl(269deg 84% 68%) 61%,
+    hsl(252deg 98% 74%) 75%,
+    hsl(234deg 100% 75%) 82%,
+    hsl(220deg 100% 71%) 86%,
+    hsl(212deg 100% 67%) 88%,
+    hsl(206deg 100% 65%) 91%,
+    hsl(203deg 100% 66%) 94%,
+    hsl(201deg 96% 67%) 97%,
+    hsl(199deg 87% 70%) 100%
+  );
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  background: linear-gradient(to right, #e252d8 0%, #6ecbf5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}

@@ -1,6 +1,11 @@
 body {
   background-color: var(--color-grey);
 }
+
+* {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 3em;
   font-family: var(--font-rowdies);
@@ -65,13 +70,16 @@ input[type="checkbox"]:checked:after {
   font-size: 32px;
 }
 
-button {
+.button {
   background-color: var(--color-black);
-  padding: 16px;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
 }
 
 .depositContainer {
   background-color: var(--color-light-grey);
   padding: 16px;
-  max-width: fit-content;
+  width: 600px;
 }

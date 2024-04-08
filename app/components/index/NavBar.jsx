@@ -19,18 +19,21 @@ export default function NavBar() {
       </div>
 
       <nav ref={navRef}>
-        <div style={{ marginRight: "200px" }}>
+        <div>
           <Link to="/services">Services</Link>
           <Link to="/hosting">Hosting</Link>
           <Link to="/client_library">Client Library</Link>
         </div>
         <div>
-          <a>
-            <FaUser />
+          <Link className="signInButton" to="/login">
+            <img
+              src="./imgs/gradient_person_icon.png"
+              style={{ width: "20px" }}
+            />
             Sign In
-          </a>
+          </Link>
           <button className="navBtn closeBtn" onClick={showNavBar}>
-            <FaTimes fill="green" />
+            <FaTimes />
           </button>
         </div>
       </nav>

@@ -1,5 +1,6 @@
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import style from "../styles/services/deposit.css";
+import { Link } from "@remix-run/react";
 export default function Deposit() {
   return (
     <body>
@@ -65,7 +66,10 @@ export default function Deposit() {
           </div>
         </section>
         <section>
-          <button>Pay</button>
+          <button className="button">
+            <Link to="/payment_form">Pay</Link>
+            <img src="./imgs/card.png" />
+          </button>
         </section>
       </div>
     </body>
