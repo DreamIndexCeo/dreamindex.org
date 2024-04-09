@@ -7,7 +7,7 @@ export default function Deposit() {
       <NavBar />
       <div className="columnContainer">
         <section>
-          <h1>Start Your Dream Website Creation</h1>
+          <h1 className="gradientTitle">Start Your Dream Website Creation</h1>
         </section>
 
         <section>

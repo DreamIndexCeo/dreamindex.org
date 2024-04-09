@@ -16,7 +16,9 @@ export default function Services() {
       <NavBar />
 
       <section className="columnContainer">
-        <h1>Where your Dream Website becomes Reality</h1>
+        <h1 className="gradientTitle">
+          Where your Dream Website becomes Reality
+        </h1>
         <div className="flexParagraph">
           <p>
             Offering options for{" "}

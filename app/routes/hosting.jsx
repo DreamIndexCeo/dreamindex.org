@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import styles from "../styles/hosting/hosting.css";
 export const meta = () => {
@@ -16,15 +17,13 @@ export default function Services() {
           website
         </p>
       </section>
-      
+
       <section className="switchContainer">
-        <p className="subTitle">
-          Monthly / Yearly
-        </p>
+        <p className="subTitle">Monthly / Yearly</p>
         <label class="switch">
-            <input class="toggle" type="checkbox"/>
-            <span class="slider"></span>
-            <span class="card-side"></span>
+          <input class="toggle" type="checkbox" />
+          <span class="slider"></span>
+          <span class="card-side"></span>
         </label>
       </section>
 
@@ -93,13 +92,15 @@ export default function Services() {
               <h3 className="price2">/m</h3>
             </div>
           </div>
-
-          
         </section>
 
         <a class="fancy" href="#">
           <span class="top-key"></span>
-          <span class="text">Get A Quote</span>
+          <span>
+            <Link class="text" to="/services">
+              Get A Quote
+            </Link>
+          </span>
           <span class="bottom-key-1"></span>
           <span class="bottom-key-2"></span>
         </a>

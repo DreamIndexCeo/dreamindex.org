@@ -31,7 +31,7 @@ export default function SubmittedPayment() {
           </div>
           <button>
             <Link className="homeButton" to="/">
-              Send
+              Home
             </Link>
           </button>
         </div>

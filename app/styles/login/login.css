@@ -1,6 +1,6 @@
 body {
   background-color: var(--color-black);
-  background-image: url("/imgs/starry_background.png");
+  background-image: url("/imgs/big_earth.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -10,8 +10,36 @@ h1 {
   color: var(--color-white);
 }
 
+.loginContainer {
+  background-color: var(--color-translucent-black);
+  border-radius: 50px;
+  padding: 60px;
+  height: 540px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 1;
+}
+
+/* for the gradient border */
+.loginContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 5px;
+  background: linear-gradient(300deg, #c152e2, #6ecbf5);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
 .loginButton {
-  background-color: whitesmoke;
+  background-color: var(--color-white);
   border-radius: 50px;
   padding: 16px;
   width: 50%;
@@ -24,23 +52,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
-.centered {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loginContainer {
-  background-color: rgb(77, 72, 72, 0.8);
-  border-radius: 50px;
-  padding: 60px;
-  height: 540px;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
+
 .form__group {
   position: relative;
   padding: 20px 0 0;

@@ -8,7 +8,7 @@ export const meta = () => {
 export default function ContactForm() {
   return (
     <body>
-      <div className="centered">
+      <div className="bodyCentered">
         <div className="paymentFormContainer">
           <div className="rowContainer">
             <img src="./imgs/color_logo.png" />

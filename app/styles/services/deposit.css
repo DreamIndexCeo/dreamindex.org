@@ -6,15 +6,6 @@ body {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 3em;
-  font-family: var(--font-rowdies);
-  font-weight: 900;
-  background: linear-gradient(to left, #e252d8 0%, #6ecbf5 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .smallDivider {
   background-color: var(--color-black);
   width: 90px;
@@ -54,7 +45,7 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
   background-color: none;
-  border: 2px solid #000000;
+  border: 2px solid var(--color-black);
   display: inline-block;
   position: relative;
 }
@@ -66,7 +57,7 @@ input[type="checkbox"]:checked:after {
   position: absolute;
   top: 1px;
   left: 1px;
-  background: #000000;
+  background: var(--color-black);
   font-size: 32px;
 }
 

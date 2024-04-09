@@ -7,7 +7,7 @@ export const meta = () => {
 export default function LogIn() {
   return (
     <body>
-      <div className="centered">
+      <div className="bodyCentered">
         <div className="loginContainer">
           <h1>Login</h1>
           <div class="form__group field">

@@ -1,44 +1,45 @@
-.grayBox, .dynamicGrayBox {
-    width: 200px;
-    height: 200px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.grayBox,
+.dynamicGrayBox {
+  width: 200px;
+  height: 200px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .dynamicGrayBox {
-    background-color: #3F3E3E; 
+  background-color: #3f3e3e;
 }
 
 .grayBox {
-    background-color: #D0CFCF;
-    box-shadow: 5px 10px 9px -3px gray;
+  background-color: #d0cfcf;
+  box-shadow: 5px 10px 9px -3px var(--color-grey);
 }
 
 .grayBoxColumnContainer {
-    display: flex;
-    gap: 1em;
+  display: flex;
+  gap: 1em;
 }
 
 .grayBox img {
-    width: 70px;
+  width: 70px;
 }
 .codyStartSubtitle {
-    font-size: 20px;
-    font-family: var(--font-codystar);
+  font-size: 20px;
+  font-family: var(--font-codystar);
 }
 
 .codyStartParagraph {
-    font-size: 10px;
-    font-weight: 600;
-    font-family: var(--font-codystar);
+  font-size: 10px;
+  font-weight: 600;
+  font-family: var(--font-codystar);
 }
 
 .cutiveParagraph {
-    font-size: 20px;
-    font-weight: 700;
-    font-family: var(--font-cutive-mono);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-cutive-mono);
 }
