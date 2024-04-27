@@ -37,6 +37,10 @@
   text-decoration: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 button {
   background: none;
   border: none;
@@ -152,6 +156,11 @@ section {
   text-align: right;
   color: var(--color-black);
 }
+
+#computerLogo {
+  width: 500px;
+}
+
 .dica {
   background-color: var(--color-black);
   position: relative;
@@ -160,4 +169,18 @@ section {
 
 .dica img {
   padding: 0px 30px;
+}
+
+@media only screen and (max-width: 1500px) {
+  #computerLogo {
+    width: 350px;
+  }
+
+  .codyStartHeader {
+    text-align: center;
+  }
+
+  .arrowContainer {
+    display: none;
+  }
 }

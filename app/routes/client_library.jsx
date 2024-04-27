@@ -23,10 +23,7 @@ export default function ClientLibrary() {
             <p>Price</p>
             <p>Catergory</p>
           </div>
-          <div
-            className="pillDiv rowContainer"
-            style={{ marginRight: "200px" }}
-          >
+          <div className="pillDiv rowContainer">
             <LibraryWebsite />
             <LibraryDesign />
             <LibraryApp />

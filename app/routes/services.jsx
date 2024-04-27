@@ -21,8 +21,9 @@ export default function Services() {
         </h1>
         <div className="flexParagraph">
           <p>
-            Offering options for{" "}
-            <span style={{ color: "red" }}>4 months financing</span> to give you
+            Offering options for
+            <span style={{ color: "red" }}> 4 months financing</span> to give
+            you
           </p>
           <p> more flexibility</p>
         </div>
@@ -45,7 +46,7 @@ export default function Services() {
             </p>
           </div>
         </section>
-        <div style={{ textAlign: "center" }}>
+        <div class="blueSeperator">
           <img src="./imgs/line_one.png" />
         </div>
         <section className="gifParagraphContainer">
@@ -65,7 +66,7 @@ export default function Services() {
             <img src="./imgs/gifs/time.gif" />
           </div>
         </section>
-        <div style={{ textAlign: "center" }}>
+        <div class="blueSeperator">
           <img src="./imgs/line_two.png" />
         </div>
         <section className="gifParagraphContainer">

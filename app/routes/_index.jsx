@@ -142,7 +142,7 @@ export default function Index() {
 
       <section className="dreamsite rowContainer">
         <div>
-          <img style={{ width: "500px" }} src="./imgs/computer_logo.png" />
+          <img id="computerLogo" src="./imgs/computer_logo.png" />
         </div>
         <div style={{ width: "500px" }}>
           <h1
@@ -180,7 +180,7 @@ export default function Index() {
           <h1 className="moonRocksHeader">D.I.C.A</h1>
           <img style={{ width: "350px" }} src="./imgs/dica_content.png" />
           <h1 className="codyStartHeader">Building the Digital Market</h1>
-          <div>
+          <div className="arrowContainer">
             <img src="./imgs/left_curve_arrow.png" />
             <img src="./imgs/down_arrow.png" />
             <img src="./imgs/right_curve_arrow.png" />
