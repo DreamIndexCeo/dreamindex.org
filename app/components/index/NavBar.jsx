@@ -23,6 +23,7 @@ export default function NavBar() {
           <Link to="/services">Services</Link>
           <Link to="/hosting">Hosting</Link>
           <Link to="/client_library">Client Library</Link>
+          <Link to="/contact_us">Contact Us</Link>
         </div>
         <div>
           <Link className="signInButton" to="/login">

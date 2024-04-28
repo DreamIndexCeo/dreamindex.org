@@ -1,19 +1,31 @@
 .bubbleCurve {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .bubbleCurve svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
 }
 
-/* .custom-shape-divider-bottom-1704756441 .shape-fill {
-    fill: #D9D9D9;
-} */
+.topBubbleCurve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.topBubbleCurve svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 124px;
+}

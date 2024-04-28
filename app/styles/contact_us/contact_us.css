@@ -1,0 +1,134 @@
+.body,
+.pupleBottomBackground {
+  position: relative;
+}
+.contactUsHeader,
+.pupleBottomBackground {
+  background-color: var(--color-plum-purple);
+}
+
+.contactUsHeader div {
+  width: 40%;
+}
+
+.contactUsHeader p {
+  font-size: 1.2em;
+  font-family: var(--font-rowdies);
+}
+
+.whiteMiddleBackground {
+  background-color: var(--color-white);
+}
+
+.whiteMiddleBackground {
+  height: 40rem;
+}
+
+.contactForm {
+  background-color: var(--color-white);
+  width: 678px;
+  height: 750px;
+  left: 10%;
+  top: 35%;
+  padding: 32px;
+  position: absolute;
+  border: 2px solid var(--color-black);
+  box-shadow: 0px 0px 33.9px 4px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 3em;
+}
+
+.pillButton {
+  border-radius: 23px;
+  background: var(--color-white);
+  width: 160px;
+  height: 38px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  background-color: var(--color-black);
+  width: 100px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+}
+
+.cardContainer {
+  position: absolute;
+
+  left: 65%;
+  top: 30%;
+}
+
+.cardContainer img {
+  width: 90%;
+}
+.custom-shape-divider-top-1714344030 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1714344030 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 124px;
+}
+
+.custom-shape-divider-top-1714344030 .shape-fill {
+  fill: #ffffff;
+}
+
+.input,
+.biggerInput {
+  width: 95%;
+  color: var(--color-black);
+  padding: 0 0.5rem;
+  border: 2px solid var(--color-black);
+  background: var(--color-light-grey);
+  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.25) inset;
+  font-size: 1rem;
+}
+
+.biggerInput {
+  height: 200px;
+}
+
+.input {
+  height: 30px;
+}
+
+.inputLabel,
+.topicLabel {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-rowdies);
+  font-size: 1rem;
+  color: var(--color-black);
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+.input:hover,
+.input:focus,
+.inputGroup:hover .input,
+.biggerInput:hover,
+.biggerInput:focus {
+  outline: none;
+  border-color: var(--color-black);
+}
+
+.inputGroup:hover .inputLabel,
+.biggerInput:focus .input:focus {
+  color: var(--color-black);
+}

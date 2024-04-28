@@ -10,6 +10,7 @@
 :root {
   --color-navy-blue: #111827;
   --color-bright-purple: #c152e2;
+  --color-plum-purple: #2a2455;
   --color-bright-blue: #6ecbf5;
   --color-white: #ffffff;
   --color-off-white: #e8e8e8;
@@ -104,11 +105,23 @@ section {
   font-family: var(--font-codystar);
 }
 
-.gradientTitle {
-  font-size: 4em;
+.gradientTitle,
+.gradientLabel {
   font-family: var(--font-rowdies);
   font-weight: 900;
-  background: linear-gradient(to left, #e252d8 0%, #6ecbf5 100%);
+  background: linear-gradient(to left, #e252d8 10%, #6ecbf5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientTitle {
+  font-size: 4em;
+}
+
+.gradientLabel {
+  font-size: 3em;
+  background: linear-gradient(to left, #e252d8 80%, #6ecbf5 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
