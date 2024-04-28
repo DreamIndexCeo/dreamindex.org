@@ -5,7 +5,9 @@ import { Link } from "@remix-run/react";
 import TopBubbleCurve, {
   links as topBubbleCurveLinks,
 } from "../components/svgs/topBubbleCurve";
-
+export const meta = () => {
+  return [{ title: "DreamIndex || Contact Us" }];
+};
 export default function ContactUs() {
   return (
     <body>
@@ -37,7 +39,7 @@ export default function ContactUs() {
           />
         </div>
         <button>
-          <Link className="button" to="/submitted_payment">
+          <Link className="button" to="/submitted_contact_form">
             <img src="./imgs/airplane.png" style={{ width: "15px" }} />
             Send
           </Link>

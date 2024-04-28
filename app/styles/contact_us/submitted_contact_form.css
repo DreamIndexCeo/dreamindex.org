@@ -1,0 +1,55 @@
+h1 {
+  font-size: 3em;
+  font-family: var(--font-rowdies);
+  font-weight: 900;
+  background: linear-gradient(to left, #e252d8 0%, #6ecbf5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-weight: 100;
+  font-family: var(--font-righteous);
+  line-height: 30pt;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5em;
+  align-items: center;
+}
+
+.boxContainer {
+  background-color: var(--color-grey);
+  color: var(--color-black);
+  width: 100%;
+  padding: 32px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.centeredText {
+  width: 500px;
+  text-align: center;
+}
+.centeredText #mainMessage {
+  color: var(--color-black);
+}
+
+.centeredText #noticeMessage {
+  font-size: 1em;
+  color: var(--color-bright-red);
+}
+.homeButton {
+  background-color: var(--color-white);
+  padding: 8px 32px;
+  border-radius: 10px;
+  color: var(--color-black);
+  font-weight: bold;
+}
