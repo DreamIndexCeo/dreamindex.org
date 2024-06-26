@@ -17,19 +17,20 @@ section {
   margin: 1em;
 }
 
-.depositContainer p,
-.depositContainer li {
+
+.commissionContainer p,
+.commissionContainer li {
   color: var(--color-black);
   font-family: var(--font-righteous);
   list-style: none;
 }
 
-.depositContainer p {
+.commissionContainer p {
   font-size: 24px;
   text-align: center;
 }
 
-.depositList {
+.commissionList {
   display: flex;
   gap: 1em;
 }
@@ -38,7 +39,7 @@ section {
   padding: 16px;
 }
 
-.depositContainer li {
+.commissionContainer li {
   display: flex;
   gap: 0.3em;
   align-items: center;
@@ -73,7 +74,7 @@ input[type="radio"]:checked:after {
   gap: 0.5em;
 }
 
-.depositContainer {
+.commissionContainer {
   background-color: var(--color-light-grey);
   padding: 16px;
   width: 600px;

@@ -11,7 +11,7 @@ export default function ContactForm() {
       <div className="bodyCentered">
         <div className="paymentFormContainer">
           <div className="rowContainer">
-            <img src="./imgs/color_logo.png" />
+            <img src="../imgs/color_logo.png" />
           </div>
           <div class="inputGroup">
             <label class="inputLabel">
@@ -283,7 +283,7 @@ export default function ContactForm() {
           <div className="rowContainer">
             <button>
               <Link className="button" to="/submitted_payment">
-                <img src="./imgs/airplane.png" style={{ width: "15px" }} />
+                <img src="../imgs/airplane.png" style={{ width: "15px" }} />
                 Send
               </Link>
             </button>

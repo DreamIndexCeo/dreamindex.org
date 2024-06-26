@@ -11,29 +11,21 @@ export default function SubmittedPayment() {
     <body>
       <NavBar />
       <div className="mainContent">
-        <h1>Your Form Has Been Submitted</h1>
+        <h1>Your Payment has been received</h1>
 
         <div className="boxContainer">
-          <img src="imgs/gifs/sentAirplane.gif" style={{ width: "200px" }} />
+          <img src="../imgs/gifs/sentAirplane.gif" style={{ width: "200px" }} />
 
           <div style={{ width: "400px", textAlign: "center" }}>
             <h2>
-              Your Quote has been send to us. During this time of waiting, we
-              suggest get everything you would like to show case to your
-              designer during your meeting
+              Your Payment has been successfully made. We will be sending a link to your consolation form with an access code to begin filling out.
             </h2>
           </div>
           <div style={{ width: "500px", textAlign: "center" }}>
             <h2>
-              (You will receive a text and email reminder a day before your
-              Meeting)
+              (You will receive the email within the next <br></br>30 minutes)
             </h2>
           </div>
-          <button>
-            <Link className="homeButton" to="/">
-              Home
-            </Link>
-          </button>
         </div>
       </div>
     </body>
