@@ -28,7 +28,7 @@ export default function PriceBox({
         </li>
       </ul>
       <button>
-        <Link to="/payment/commission">Get Started</Link>
+        <Link to="/commission/payment">Get Started</Link>
       </button>
     </div>
   );

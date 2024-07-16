@@ -7,6 +7,45 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+type AdmissionsBookedDate {
+  Day   Int
+  Month Int
+  Year  Int
+}
+
+type AdmissionsMadeDate {
+  Day   Int
+  Month Int
+  Year  Int
+}
+
+type FeedbackCreated {
+  Day   Int
+  Month Int
+  Year  Int
+}
+
+type FormsQuestions {
+  one FormsQuestionsOne
+}
+
+type FormsQuestionsOne {
+  respones String
+  subject  String
+}
+
+model Admissions {
+  id         String               @id @default(auto()) @map("_id") @db.ObjectId
+  BookedDate AdmissionsBookedDate
+  BookedTime String
+  MadeDate   AdmissionsMadeDate
+  business   String
+  email      String
+  name       String
+  phone      Int
+  status     String
+}
+
 model Clients {
   id            String  @id @default(auto()) @map("_id") @db.ObjectId
   business      String
@@ -19,29 +58,38 @@ model Clients {
   root_password String  @map("root-password")
   status        Boolean
   website       String
-
 }
 
-model Admissions {
+model Feedback {
+  id      String          @id @default(auto()) @map("_id") @db.ObjectId
+  Created FeedbackCreated
+  Field   String
+  Status  Boolean
+  Subject String
+  userID  String          @db.ObjectId
+}
 
-  id            String  @id @default(auto()) @map("_id") @db.ObjectId
-  business      String
-  email         String
-  name          String
-  phone         Int
-  date_for      DateTime
-  date_made     DateTime @default(now())
-  status        String
+model Forms {
+  id         String         @id @default(auto()) @map("_id") @db.ObjectId
+  Business   String
+  Email      String
+  Name       String
+  Phone      String
+  Questions  FormsQuestions
+  accessCode String
 }
 
 model Request {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  clientid  String
+  date_made DateTime @db.Date
+  details   String
+  resolved  DateTime @db.Date
+  status    Boolean
+  subject   String
+  warning   Boolean
+}
 
-  id            String  @id @default(auto()) @map("_id") @db.ObjectId
-  clientid      String
-  date_made     DateTime @default(now())
-  subject       String
-  details       String
-  status        Boolean
-  warning       Boolean
-  resolved      DateTime
+model Team {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
 }

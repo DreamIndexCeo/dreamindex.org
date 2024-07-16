@@ -12,11 +12,11 @@ export default function SubmittedContactForm() {
         <h1>Your Form Has Been Submitted</h1>
 
         <div className="boxContainer">
-          <img src="imgs/gifs/sentAirplane.gif" style={{ width: "200px" }} />
+          <img src="../imgs/gifs/sentAirplane.gif" style={{ width: "200px" }} />
 
           <div className="centeredText">
             <h2 id="mainMessage">
-              Your Message has been send to us. We will get back to you as soon
+              Your Message has been sent to us. We will get back to you as soon
               as possible.
             </h2>
           </div>

@@ -1,11 +1,35 @@
 import styles from "../styles/services/paymentForm.css";
+import CalendarCSS from '../styles/services/calendar.css';
+import ColorPickerCSS from '../styles/services/colorPicker.css';
+import React, { useState } from 'react';
 import { Link } from "@remix-run/react";
+import { Calendar, ColorPicker } from '../components/index.js';
 
 export const meta = () => {
-  return [{ title: "DreamIndex || Payment Form" }];
+  return [{ title: "DreamIndex || Commission Form" }];
 };
 
+//---------------------------------------------------------------------------------------
+import { useLoaderData } from '@remix-run/react';
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient()
+
+
+export async function loader(){
+  const list = await prisma.admissions.findMany({});
+  return {
+    data: list,
+  }
+}
+//----------------------------------------------------------------------------------------
+
+
 export default function ContactForm() {
+
+  const { data : data } = useLoaderData();
+
+  const [hex, setHex] = useState("#fff");
+
   return (
     <body>
       <div className="bodyCentered">
@@ -25,6 +49,7 @@ export default function ContactForm() {
               type="email"
             />
           </div>
+          
           <div class="inputGroup">
             <label class="inputLabel">
               <span style={{ color: "red" }}>*</span> Full Name:
@@ -166,13 +191,20 @@ export default function ContactForm() {
           </div>
           <div class="inputGroup">
             <label class="inputLabel">
-              Desired Primary / Main Color of your website:
+              Desired Primary / Main Color of your website: ( Use color name or Hex Code or ColorPicker Box )
             </label>
+
+            <ColorPicker id='one'/>
+
           </div>
+
           <div class="inputGroup">
             <label class="inputLabel">
-              Desired Secndary Color of your website:
+              Desired Secndary Color of your website: ( Use color name or Hex Code or ColorPicker Box )
             </label>
+
+            <ColorPicker id='two'/>
+
           </div>
           <div class="inputGroup">
             <label class="inputLabel">What is your target audience:</label>
@@ -256,10 +288,16 @@ export default function ContactForm() {
             </ul>
           </div>
           <div class="inputGroup">
+
             <label class="inputLabel">
               If you have a deadline and would like to pay for a priority fee
               please select your deadline date:
             </label>
+
+
+            <Calendar Data={data} id="Calendar-1"/>
+            
+
           </div>
           <div class="inputGroup">
             <label class="inputLabel">
@@ -278,11 +316,12 @@ export default function ContactForm() {
               Book the next available date for your Consultation Meeting with
               out Design Team (Held on Zoom):
             </label>
+            <Calendar Data={data} id="Calendar-2"/>
           </div>
 
           <div className="rowContainer">
             <button>
-              <Link className="button" to="/submitted_payment">
+              <Link className="button" to="/commission/success">
                 <img src="../imgs/airplane.png" style={{ width: "15px" }} />
                 Send
               </Link>
@@ -295,5 +334,5 @@ export default function ContactForm() {
 }
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: "stylesheet", href: styles }, {rel: 'stylesheet', href: CalendarCSS}, {rel: 'stylesheet', href: ColorPickerCSS}];
 }
