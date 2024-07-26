@@ -24,6 +24,7 @@
 
 .priceBox p {
   line-height: 20pt;
+  font-size: 18px;
 }
 .priceBox li {
   display: flex;
@@ -32,7 +33,7 @@
 }
 
 .priceBox button {
-  background-color: var(--color-bright-purple);
+  background-color: #8884bc;
   border-radius: 5px;
   padding: 12px;
 }

@@ -32,9 +32,11 @@ const Calendar = ({
   className,
   id,
   Data,
-  value, 
+  value,
+  name, 
   ...attrs 
 }) => {
+
 
   const [pastClick, setPastClick] = useState(null)
 
@@ -94,6 +96,7 @@ const Calendar = ({
     }
     setPastClick(id);
     //console.log(pastClick);
+    
   }
 
   function filterByBookedDate(arr, month, day, year) {
@@ -116,6 +119,12 @@ const Calendar = ({
   
 
     return (
+      <>
+        <input
+          name={id}
+          id="dateValue"
+          value={selectedDate}
+        />
 
         <div className='calendar-dropdown'>
           <div className='header'>
@@ -164,6 +173,7 @@ const Calendar = ({
           </div>
 
         </div>
+      </>
     );
   };
 

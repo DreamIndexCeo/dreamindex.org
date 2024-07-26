@@ -147,3 +147,7 @@
 .month-day.current.meeting, .month-day.meeting{
   color: red;
 }
+
+#dateValue{
+  visibility: hidden;
+}

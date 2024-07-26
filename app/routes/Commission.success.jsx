@@ -18,13 +18,13 @@ export default function SubmittedPayment() {
 
           <div style={{ width: "400px", textAlign: "center" }}>
             <h2>
-              Your Payment has been successfully made. We will be sending a link to your consolation form with an access code to begin filling out.
+            Thank you for your payment! We're thrilled to have you on board! Get ready to dive in—we'll be sending you a link to your consultation form along with an access code shortly. Your exciting journey with us starts now!
             </h2>
           </div>
           <div style={{ width: "500px", textAlign: "center" }}>
-            <h2>
-              (You will receive the email within the next <br></br>30 minutes)
-            </h2>
+            <p>
+              Look out for your email in the next 30 mins
+            </p>
           </div>
         </div>
       </div>

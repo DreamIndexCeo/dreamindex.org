@@ -2,7 +2,7 @@ import styles from "../styles/services/paymentForm.css";
 import CalendarCSS from '../styles/services/calendar.css';
 import ColorPickerCSS from '../styles/services/colorPicker.css';
 import React, { useState } from 'react';
-import { Link } from "@remix-run/react";
+import { Form, Link } from "@remix-run/react";
 import { Calendar, ColorPicker } from '../components/index.js';
 
 export const meta = () => {
@@ -23,17 +23,47 @@ export async function loader(){
 }
 //----------------------------------------------------------------------------------------
 
+function Auth(){
+
+}
+
+function uploadForm(){
+
+}
+
+export async function action(){
+  return null;
+}
+
+
+//----------------------------------------------------------------------------------------
 
 export default function ContactForm() {
 
   const { data : data } = useLoaderData();
 
-  const [hex, setHex] = useState("#fff");
+
+  function phoneFill(event) {
+    let input = event.target.value.replace(/\D/g, '');
+    let formattedInput = '';
+  
+    if (input.length > 0) {
+        formattedInput += '(' + input.substring(0, 3);
+    }
+    if (input.length >= 4) {
+        formattedInput += ') ' + input.substring(3, 6);
+    }
+    if (input.length >= 7) {
+        formattedInput += '-' + input.substring(6, 10);
+    }
+    event.target.value = formattedInput;
+  };
+
 
   return (
     <body>
       <div className="bodyCentered">
-        <div className="paymentFormContainer">
+        <Form className="paymentFormContainer" method="post">
           <div className="rowContainer">
             <img src="../imgs/color_logo.png" />
           </div>
@@ -43,10 +73,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="id_Key"
+              id="id_Key"
               class="input"
-              type="email"
+              type="text"
             />
           </div>
           
@@ -56,10 +86,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="name"
+              id="name"
               class="input"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -68,10 +98,13 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="phone"
+              id="phone"
               class="input"
-              type="email"
+              placeholder="(###) ###-####"
+              maxlength="14"
+              type="tel"
+              onChange={phoneFill}
             />
           </div>
           <div class="inputGroup">
@@ -80,8 +113,8 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="email"
+              id="email"
               class="input"
               type="email"
             />
@@ -92,10 +125,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="business"
+              id="business"
               class="input"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -105,10 +138,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="Describe your business in as much detail as possible"
+              id="Question1"
               class="biggerInput"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -117,11 +150,11 @@ export default function ContactForm() {
             </label>
             <ul>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Have you had a website in the past?" value="Yes" />
                 Yes
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Have you had a website in the past?" value="No" />
                 No
               </li>
             </ul>
@@ -132,19 +165,19 @@ export default function ContactForm() {
             </label>
             <ul>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="What Category describes your wesbite?" value="Contact Wesbsite"/>
                 Contact Wesbsite
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="What Category describes your wesbite?" value="Appointment Booking Website"/>
                 Appointment Booking Website
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="What Category describes your wesbite?" value="E-commerence Website" />
                 E-commerence Website
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="What Category describes your wesbite?" value="Custom"/>
                 Custom
               </li>
             </ul>
@@ -153,15 +186,15 @@ export default function ContactForm() {
             <label class="inputLabel">Do you have a logo</label>
             <ul>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Do you have a logo" value="Yes"/>
                 Yes
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Do you have a logo" value="No"/>
                 No
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Do you have a logo" value="Would like one made" />
                 Would like one made
               </li>
             </ul>
@@ -170,10 +203,10 @@ export default function ContactForm() {
             <label class="inputLabel">Needed Features for you website:</label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="Needed Features for you website"
+              id="Question5"
               class="biggerInput"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -183,10 +216,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="Any specific pages you want included"
+              id="Question6"
               class="biggerInput"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -194,7 +227,7 @@ export default function ContactForm() {
               Desired Primary / Main Color of your website: ( Use color name or Hex Code or ColorPicker Box )
             </label>
 
-            <ColorPicker id='one'/>
+            <ColorPicker id='Main-Color' />
 
           </div>
 
@@ -203,27 +236,27 @@ export default function ContactForm() {
               Desired Secndary Color of your website: ( Use color name or Hex Code or ColorPicker Box )
             </label>
 
-            <ColorPicker id='two'/>
+            <ColorPicker id='Secondary-Color'/>
 
           </div>
           <div class="inputGroup">
             <label class="inputLabel">What is your target audience:</label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="What is your target audience"
+              id="Question7"
               class="input"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
             <label class="inputLabel">List any goals for your website:</label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="List any goals for your website"
+              id="Question8"
               class="biggerInput"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -233,10 +266,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="Do you have any specific design elements you would like incorporated into your website"
+              id="Question9"
               class="biggerInput"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -246,10 +279,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="Please link any websites by URL that you would like to take inspiration from"
+              id="Question10"
               class="input"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -259,15 +292,15 @@ export default function ContactForm() {
             </label>
             <ul>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Do you have images you can provide that will be used on our website"  value="Yes"/>
                 Yes
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Do you have images you can provide that will be used on our website" value="No"/>
                 No
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Do you have images you can provide that will be used on our website" value="Yes but need time to collect"/>
                 Yes but need time to collect
               </li>
             </ul>
@@ -278,11 +311,11 @@ export default function ContactForm() {
             </label>
             <ul>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Were you intrested in an account system" value="Yes"/>
                 Yes
               </li>
               <li>
-                <input type="checkbox" />
+                <input type="radio" name="Were you intrested in an account system" value="No"/>
                 No
               </li>
             </ul>
@@ -294,8 +327,7 @@ export default function ContactForm() {
               please select your deadline date:
             </label>
 
-
-            <Calendar Data={data} id="Calendar-1"/>
+            <Calendar Data={data} id="Deadline"/>
             
 
           </div>
@@ -305,10 +337,10 @@ export default function ContactForm() {
             </label>
             <input
               autocomplete="off"
-              name="Email"
-              id="Email"
+              name="Is there any further information you would like to provide"
+              id="Question13"
               class="biggerInput"
-              type="email"
+              type="text"
             />
           </div>
           <div class="inputGroup">
@@ -316,18 +348,16 @@ export default function ContactForm() {
               Book the next available date for your Consultation Meeting with
               out Design Team (Held on Zoom):
             </label>
-            <Calendar Data={data} id="Calendar-2"/>
+            <Calendar Data={data} id="Meeting"/>
           </div>
 
           <div className="rowContainer">
-            <button>
-              <Link className="button" to="/commission/success">
+            <button className="button"type="submit">
                 <img src="../imgs/airplane.png" style={{ width: "15px" }} />
                 Send
-              </Link>
             </button>
           </div>
-        </div>
+        </Form>
       </div>
     </body>
   );

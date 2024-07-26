@@ -108,7 +108,7 @@ export default function Commission() {
                 <p>$50</p>
                 <span className="smallDivider"></span>
                 <p className="commissionFeeP">
-                  To begin the website creation we need to take a commission Fee, to begin the meeting process. <br></br> (This price can not be refunded).
+                To kickstart your website journey, we just need to secure a commission fee. This sets the stage for our exciting collaboration and the beginning of our creative process. <br></br> (This price can not be refunded).
                 </p>
               </div>
             </div>

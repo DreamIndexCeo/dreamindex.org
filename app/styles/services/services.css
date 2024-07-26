@@ -4,11 +4,20 @@ body {
 
 p {
   font-family: var(--font-rowdies);
-  font-weight: 900;
+  font-weight: 700;
 }
+
 
 li {
   font-family: var(--font-rowdies);
+  color: rgb(177, 175, 175);
+}
+
+.desc {
+  font-family: var(--font-rowdies);
+  font-weight: 700;
+  font-size: 25px;
+  color: rgb(177, 175, 175);
 }
 .blueSeperator {
   text-align: center;
