@@ -1,10 +1,12 @@
 import styles from "../styles/services/submittedPayment.css";
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
-import { Link } from "@remix-run/react";
 
 export const meta = () => {
   return [{ title: "DreamIndex || Thank You" }];
 };
+
+
+
 
 export default function SubmittedPayment() {
   return (
@@ -26,6 +28,7 @@ export default function SubmittedPayment() {
               Look out for your email in the next 30 mins
             </p>
           </div>
+          
         </div>
       </div>
     </body>

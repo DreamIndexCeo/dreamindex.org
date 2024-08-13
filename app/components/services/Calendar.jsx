@@ -150,7 +150,7 @@ const Calendar = ({
 
             {[...Array(daysInMonth).keys()].map((day) => (
               <>
-                { new Date(`${currentMonth+1}/${day+1}/${currentYear}`) >= today.setHours(0,0,0,0)? (
+                { new Date(`${currentMonth+1}/${day+1}/${currentYear}`) > today.setHours(0,0,0,0)? (
                   <>
                     { !filterByBookedDate(Data, currentMonth+1, day+1, currentYear).length ?(
                       <div className='month-day current' key={day+1} id={id+day+1} onClick={() => { selectDate(day+1), filterByBookedDate(Data, currentMonth+1, day+1, currentYear), Click(id+day+1)}}>{day+1}</div>

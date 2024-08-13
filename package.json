@@ -10,7 +10,7 @@
     "start": "remix-serve ./build/index.js"
   },
   "dependencies": {
-    "@prisma/client": "^5.12.1",
+    "@prisma/client": "^5.18.0",
     "@remix-run/css-bundle": "^2.4.1",
     "@remix-run/node": "^2.4.1",
     "@remix-run/react": "^2.4.1",
@@ -24,7 +24,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "remix": "^2.9.2",
-    "stripe": "^15.10.0"
+    "stripe": "^15.10.0",
+    "universal-cookie": "^7.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.5.1",
@@ -33,7 +34,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prisma": "^5.12.1"
+    "prisma": "^5.18.0"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -6,12 +6,14 @@ import {
 } from "@stripe/react-stripe-js";
 
 import '../../styles/Checkout/Checkout.css';
+import Cookies from 'universal-cookie';
 
 
 
 export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
+  const cookies = new Cookies();
 
   const [email, setEmail] = React.useState('');
 
@@ -50,6 +52,9 @@ export default function CheckoutForm() {
   }, [stripe]);
 
   const handleSubmit = async (e) => {
+    
+    cookies.set('email', email, { path: '/' })
+
     e.preventDefault();
 
     if (!stripe || !elements) {
@@ -64,7 +69,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:3000/payment/success",
+        return_url: "http://localhost:3000/route/commission-mail",
         receipt_email: email,
       },
     });
@@ -83,6 +88,8 @@ export default function CheckoutForm() {
     setIsLoading(false);
   };
 
+
+
   const paymentElementOptions = {
     layout: "tabs",
   };
@@ -93,6 +100,7 @@ export default function CheckoutForm() {
         id="email"
         type="text"
         value={email}
+        style={{color: "black"}}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter email address"
       />
