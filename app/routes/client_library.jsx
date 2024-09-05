@@ -5,7 +5,7 @@ import LibraryWebsite from "../components/svgs/icons/library_websites";
 import styles from "../styles/client_library/client_library.css";
 import { FaSearch } from "react-icons/fa/index.js";
 export const meta = () => {
-  return [{ title: "DreamIndex || About Us" }];
+  return [{ title: "PLEASE WORK DreamIndex || About Us" }];
 };
 
 export default function ClientLibrary() {
