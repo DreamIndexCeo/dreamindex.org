@@ -16,7 +16,7 @@ export default function ClientLibrary() {
       </div>
 
       <section className="starryBackground headerContainer">
-        <h1>Client Library</h1>
+        <h1>Client Lirbrary</h1>
         <div className="pillDivContainer">
           <div className="pillDiv rowContainer">
             <p>Time</p>
