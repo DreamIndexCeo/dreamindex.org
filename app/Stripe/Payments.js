@@ -1,6 +1,9 @@
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+import '../routes/Loadenv';
+
+
+const stripe = new Stripe(global.process.env.STRIPE_SECRET_KEY);
 
 export async function retrievePaymentIntent( id ) {
     return await stripe.paymentIntents.retrieve(id)

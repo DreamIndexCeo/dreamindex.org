@@ -1,0 +1,1 @@
+.color-picker-container{display:flex;flex-direction:column;margin-top:20px}.color-display{width:200px;height:200px;display:flex;justify-content:center;align-items:center;border:5px soild hsl(0,0%,80%);border-radius:25px}.color-display input{background:black;color:#fff;text-align:center;width:100px;height:50px;border-radius:30px;box-shadow:none}

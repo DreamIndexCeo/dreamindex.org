@@ -1,3 +1,4 @@
+
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import BubbleCurve, {
   links as bubbleCurveLinks,
