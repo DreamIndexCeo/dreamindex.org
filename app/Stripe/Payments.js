@@ -1,9 +1,9 @@
 import Stripe from 'stripe'
 
-import '../routes/Loadenv';
+import 'dotenv/config'
 
 
-const stripe = new Stripe(global.process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export async function retrievePaymentIntent( id ) {
     return await stripe.paymentIntents.retrieve(id)

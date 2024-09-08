@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import 'dotenv/config';
 
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient()
@@ -37,9 +38,9 @@ const prisma = new PrismaClient()
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-        user: 'dreamindexceo@gmail.com', // your Zoho email
-        pass: '97i4PZkQBumq'
-    }
+        user: process.env.EMAIL, // your Zoho email
+        pass: process.env.EMAIL_PASS,
+    },
   });
 
 //--------------------------------------------------------------------------------------------------------------------
