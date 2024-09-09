@@ -70,7 +70,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://198.71.58.171:3000/route/commission-mail",
+        return_url: "http://dreamindex.org/route/commission-mail",
         receipt_email: email,
       },
     });
