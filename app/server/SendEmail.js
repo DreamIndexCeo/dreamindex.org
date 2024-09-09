@@ -80,7 +80,7 @@ export async function FormLink(email) {
               <p>Thank you for choosing Dream Index as your method of web creation. We are thrilled to have you on board and look forward to creating something amazing together.</p>
               <p>To get started, please fill out our consultation form by clicking the link below:</p>
               <p>Your access code is: <strong>${code}</strong>. Please enter this code in the form.</p>
-              <p><a class="button" href="http://localhost:3000/commission/form">Consultation Form</a></p>
+              <p><a class="button" href="http://198.71.58.171:3000/commission/form">Consultation Form</a></p>
               <p>If you have any questions, feel free to reply to this email. We are always here to help!</p>
               <p>Best Regards,<br>Dream Index Team</p>
             </div>
