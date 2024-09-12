@@ -32,7 +32,7 @@ export default function Services() {
           <div className="basic priceContainer">
             <h3>BASIC</h3>
             <div className="priceRow">
-              <h3 className="price">$15</h3>
+              <h3 className="price">$35</h3>
               <h3 className="price2">/m</h3>
             </div>
             <p className="planList">
@@ -49,7 +49,7 @@ export default function Services() {
           <div className="advance priceContainer">
             <h3>ADVANCED</h3>
             <div className="priceRow">
-              <h3 className="price">$35</h3>
+              <h3 className="price">$50</h3>
               <h3 className="price2">/m</h3>
             </div>
             <p className="planList">
@@ -66,9 +66,9 @@ export default function Services() {
             </p>
           </div>
           <div className="master priceContainer">
-            <h3>MASTER</h3>
+            <h3>Pro +</h3>
             <div className="priceRow">
-              <h3 className="price">$60</h3>
+              <h3 className="price">$75</h3>
               <h3 className="price2">/m</h3>
             </div>
             <p className="planList">
@@ -84,13 +84,6 @@ export default function Services() {
                 <li>+ 1 Extra Website and Database hosting</li>
               </ul>
             </p>
-          </div>
-          <div className="corporation priceContainer">
-            <h3>Corporation</h3>
-            <div className="priceRow">
-              <h3 className="price">$???</h3>
-              <h3 className="price2">/m</h3>
-            </div>
           </div>
         </section>
 

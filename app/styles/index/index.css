@@ -29,6 +29,7 @@
   --font-rowdies: "Rowdies", sans-serif;
   --font-roboto: "Roboto", sans-serif;
   --font-righteous: "Righteous", sans-serif;
+
 }
 
 * {
@@ -128,9 +129,6 @@ section {
   -webkit-text-fill-color: transparent;
 }
 
-.hero {
-  position: relative;
-}
 
 .bodyCentered {
   min-height: 100vh;

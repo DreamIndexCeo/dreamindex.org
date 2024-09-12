@@ -1,5 +1,3 @@
-
-
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import AddOnCard, {
   links as addOnCardLinks,
@@ -37,11 +35,11 @@ export default function Services() {
             <img src="./imgs/gifs/business_meetings.gif" />
           </div>
           <div className="businessMeeting">
-            <p className="desc">
+            <p>
               After Paying the Commission, you'll be able to fill out a
               consolation form to give up front information about your vision.
             </p>
-            <p className="desc">
+            <p>
               From there you'll be able to book the next available meeting date
               to have a virtual meeting to discuss the final details before the
               designing begins.
@@ -53,11 +51,11 @@ export default function Services() {
         </div>
         <section className="gifParagraphContainer">
           <div className="time">
-            <p className="desc">
+            <p>
               The development process can take anywhere from 2 to 5 weeks
               depending on your type of site.
             </p>
-            <p className="desc">
+            <p>
               During this waiting time you'll be getting updates and designs
               concept from us to approve to your liking. So you can continue to
               working hard on your business' ideas while we handle all your
@@ -76,13 +74,13 @@ export default function Services() {
             <img src="./imgs/gifs/interface.gif" />
           </div>
           <div className="interface">
-            <p className="desc">
+            <p>
               Once you website is completely ready, signed off and hosting plan
               is made, you'll get a login from us to access your Cloud Portal.
             </p>
-            <p className="desc">The Cloud Portal includes:</p>
+            <p>The Cloud Portal includes:</p>
             <p>
-              <ul className="desc">
+              <ul>
                 <li>Website Manager,</li>
                 <li>Dashboard Analytics,</li>
                 <li>Web Editor,</li>

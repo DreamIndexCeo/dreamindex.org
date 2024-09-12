@@ -48,7 +48,7 @@ li {
   list-style: none;
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
   width: 15px;
   height: 15px;
   -webkit-appearance: none;
@@ -59,7 +59,7 @@ input[type="radio"] {
   position: relative;
 }
 
-input[type="radio"]:checked:after {
+input[type="checkbox"]:checked:after {
   content: " ";
   width: 9px;
   height: 9px;
@@ -73,7 +73,6 @@ input[type="radio"]:checked:after {
 .input {
   width: 300px;
   height: 30px;
-  color: var(--color-black);
   background-color: var(--color-grey);
   border-radius: 0.5rem;
   padding: 0 1rem;
@@ -87,10 +86,9 @@ input[type="radio"]:checked:after {
 .biggerInput {
   width: 400px;
   height: 200px;
-  color: var(--color-black);
   background-color: var(--color-grey);
   border-radius: 0.5rem;
-  padding: .5rem 1rem;
+  padding: 0 1rem;
   border: 2px solid transparent;
   font-size: 1rem;
   transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,

@@ -6,10 +6,6 @@ body {
   text-decoration: none;
 }
 
-section {
-  padding: 0.9vw;
-}
-
 .smallDivider {
   background-color: var(--color-black);
   width: 90px;
@@ -43,7 +39,7 @@ section {
   gap: 0.3em;
   align-items: center;
 }
-input[type="radio"] {
+input[type="checkbox"] {
   width: 15px;
   height: 15px;
   -webkit-appearance: none;
@@ -54,7 +50,7 @@ input[type="radio"] {
   position: relative;
 }
 
-input[type="radio"]:checked:after {
+input[type="checkbox"]:checked:after {
   content: " ";
   width: 9px;
   height: 9px;

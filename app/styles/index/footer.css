@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Kanit:ital,wght@1,400&family=Nunito:wght@700&display=swap');
+
+footer{
+    background: #111;
+    padding: 56px;
+    padding-right: 300px;
+    padding-left: 162px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer p{
+    color: #3F3E3E;
+    font-family: Kanit;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+footer .line{
+    width: 3px;
+    height: 138.004px;
+    background: #3F3E3E;
+}
+footer .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+footer .left .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    gap: 20px;
+}
+footer .socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}

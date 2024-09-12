@@ -21,15 +21,6 @@ h2 {
   line-height: 30pt;
 }
 
-p{
-  font-weight: 100;
-  font-family: var(--font-righteous);
-  line-height: 30pt;
-  color: gold;
-  font-size: 20px;
-}
-
-
 .mainContent {
   display: flex;
   flex-direction: column;

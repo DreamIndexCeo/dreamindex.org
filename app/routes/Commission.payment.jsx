@@ -14,7 +14,16 @@ import { createCommissionIntent } from '../Stripe/Payments'
 
 
 
-const stripePromise = loadStripe("pk_test_51MXaWBCKNPKPb8n38xxkaoAPVYcyIfOYd3ptoKvH8LEIdVZnEDraz0mNIY00r73pRmMOcQMxokgYUTGxtHphc6iI00qh7aRKxE");
+import 'dotenv/config'
+const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
+
+// const stripePromise = loadStripe("pk_test_51MXaWBCKNPKPb8n38xxkaoAPVYcyIfOYd3ptoKvH8LEIdVZnEDraz0mNIY00r73pRmMOcQMxokgYUTGxtHphc6iI00qh7aRKxE");
+
+//
+// the old test key above brings up the page but with a fucked up checkout form (only email input form)
+//
+// the new key doesnt allow for the /commission/payment to pop up for some odd reason
+//
 
 export async function loader(){
     return await createCommissionIntent()
