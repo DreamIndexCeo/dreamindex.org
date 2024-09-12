@@ -31,12 +31,13 @@
   padding: 8px 0px;
 }
 
-.priceBox button {
+.priceBox a button {
   background-color: var(--color-bright-purple);
   border-radius: 5px;
   padding: 12px;
+  width: 100%;
 }
-.priceBox button a {
+.priceBox a button p {
   color: var(--color-navy-blue);
   font-weight: 700;
   text-decoration: none;

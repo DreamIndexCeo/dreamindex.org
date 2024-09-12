@@ -27,10 +27,11 @@ export default function PriceBox({
           {listItemThree}
         </li>
       </ul>
-      
-      <button>
-        <Link to="/commission/payment">Get Started</Link>
-      </button>
+      <Link to="/commission/payment">
+        <button>
+          <p>Get Started</p>
+        </button>
+      </Link>
     </div>
   );
 }

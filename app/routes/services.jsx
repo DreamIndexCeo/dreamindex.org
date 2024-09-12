@@ -35,11 +35,11 @@ export default function Services() {
             <img src="./imgs/gifs/business_meetings.gif" />
           </div>
           <div className="businessMeeting">
-            <p>
+            <p className="desc">
               After Paying the Commission, you'll be able to fill out a
               consolation form to give up front information about your vision.
             </p>
-            <p>
+            <p className="desc">
               From there you'll be able to book the next available meeting date
               to have a virtual meeting to discuss the final details before the
               designing begins.
@@ -51,11 +51,11 @@ export default function Services() {
         </div>
         <section className="gifParagraphContainer">
           <div className="time">
-            <p>
+            <p className="desc">
               The development process can take anywhere from 2 to 5 weeks
               depending on your type of site.
             </p>
-            <p>
+            <p className="desc">
               During this waiting time you'll be getting updates and designs
               concept from us to approve to your liking. So you can continue to
               working hard on your business' ideas while we handle all your
@@ -74,13 +74,13 @@ export default function Services() {
             <img src="./imgs/gifs/interface.gif" />
           </div>
           <div className="interface">
-            <p>
+            <p className="desc">
               Once you website is completely ready, signed off and hosting plan
               is made, you'll get a login from us to access your Cloud Portal.
             </p>
-            <p>The Cloud Portal includes:</p>
+            <p className="desc">The Cloud Portal includes:</p>
             <p>
-              <ul>
+              <ul className="desc">
                 <li>Website Manager,</li>
                 <li>Dashboard Analytics,</li>
                 <li>Web Editor,</li>

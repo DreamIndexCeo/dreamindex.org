@@ -12,27 +12,31 @@ import {loadStripe} from '@stripe/stripe-js'
 import CheckoutForm from "../components/commission/CheckoutForm";
 import { createCommissionIntent } from '../Stripe/Payments'
 
+import { json } from "@remix-run/node";
 
 
-import 'dotenv/config'
-const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
 
-// const stripePromise = loadStripe("pk_test_51MXaWBCKNPKPb8n38xxkaoAPVYcyIfOYd3ptoKvH8LEIdVZnEDraz0mNIY00r73pRmMOcQMxokgYUTGxtHphc6iI00qh7aRKxE");
+export async function loader() {
+  // Only use the secret key on the server to create the payment intent
+  const commission_int = await createCommissionIntent();
 
-//
-// the old test key above brings up the page but with a fucked up checkout form (only email input form)
-//
-// the new key doesnt allow for the /commission/payment to pop up for some odd reason
-//
+  // Use the public key to load Stripe on the client
+  const STRIPE_PUBLIC_KEY = process.env.STRIPE_PUBLIC_KEY;
 
-export async function loader(){
-    return await createCommissionIntent()
+  return json({
+    paymentIntent: commission_int,
+    publicKey: STRIPE_PUBLIC_KEY
+  });
 }
 
 
     
 export default function Commission() {
-  const paymentIntent = useLoaderData();
+   // Get paymentIntent and publicKey from loader
+   const { paymentIntent, publicKey } = useLoaderData();
+
+   // Load Stripe with the public key
+   const stripePromise = loadStripe(publicKey);
 
   const appearance = {
     theme: 'flat',

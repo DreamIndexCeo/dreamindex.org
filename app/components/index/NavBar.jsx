@@ -14,7 +14,7 @@ export default function NavBar() {
     <header>
       <div className="logo">
         <Link Link to="/">
-          <img src="./imgs/color_logo.png" />{" "}
+          <img src="../imgs/color_logo.png" />{" "}
         </Link>
       </div>
 
@@ -28,7 +28,7 @@ export default function NavBar() {
         <div>
           <Link className="signInButton" to="/login">
             <img
-              src="./imgs/gradient_person_icon.png"
+              src="../imgs/gradient_person_icon.png"
               style={{ width: "20px" }}
             />
             Sign In

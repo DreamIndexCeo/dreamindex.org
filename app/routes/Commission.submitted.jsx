@@ -1,10 +1,12 @@
+import styles from "../styles/services/submittedPayment.css";
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
-import styles from "../styles/contact_us/submitted_contact_form.css";
 import { Link } from "@remix-run/react";
+
 export const meta = () => {
   return [{ title: "DreamIndex || Thank You" }];
 };
-export default function SubmittedContactForm() {
+
+export default function SubmittedPayment() {
   return (
     <body>
       <NavBar />
@@ -14,14 +16,15 @@ export default function SubmittedContactForm() {
         <div className="boxContainer">
           <img src="../imgs/gifs/sentAirplane.gif" style={{ width: "200px" }} />
 
-          <div className="centeredText">
-            <h2 id="mainMessage">
-              Your Message has been sent to us. We will get back to you as soon
-              as possible.
+          <div style={{ width: "400px", textAlign: "center" }}>
+            <h2>
+              Your Quote has been send to us. During this time of waiting, we
+              suggest get everything you would like to show case to your
+              designer during your meeting
             </h2>
           </div>
-          <div className="centeredText">
-            <h2 id="noticeMessage">
+          <div style={{ width: "500px", textAlign: "center" }}>
+            <h2>
               (You will receive a text and email reminder a day before your
               Meeting)
             </h2>
