@@ -6,12 +6,30 @@ import Footer, { links as footerLinks } from "../components/index/Footer";
 import style from "../styles/index/home.css";
 import { Link } from "@remix-run/react";
 
-
-
-
 export const meta = () => {
-  return [{ title: "DreamIndex" }];
+  return [
+    {
+      title: "DreamIndex - Web Development for Small Businesses", // Descriptive and targeted title
+      description: "DreamIndex provides tailored web development, hosting, and SEO solutions for small businesses, empowering them to thrive online.", // Summary of what you offer
+      keywords: "DreamIndex, Dream, Index, SEO, Web3, Web Development, Web Design, Development, Web Hosting, Small Business, Small Businesses, Business Development, Small Business Web Development, Small Business SEO, Small Business Hosting, Website Development, Web Development for Small Businesses, Web Solutions for Small Businesses, SEO for Small Business, Web Hosting for Small Business, Custom Web Development, Affordable Web Development, Web Development Services, Web Development Solutions, Web Design for Small Business, Digital Development, Online Business Solutions, Professional Web Development, Small Business Digital Presence, Business Web Development", // Your relevant keywords
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization", // Since this is a web development company
+        name: "DreamIndex",
+        description: "We specialize in web development, hosting, and SEO for small businesses, helping them grow and succeed online.",
+        url: "https://www.dreamindex.org", // Add your website URL
+        logo: "https://www.dreamindex.org/public/favicon.png", // Add your logo URL
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+1-475=422=5444", // Replace with your contact information
+          contactType: "Customer Service",
+        },
+      }),
+    },
+  ];
 };
+
+
 
 
 export default function Index() {
