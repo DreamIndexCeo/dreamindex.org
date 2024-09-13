@@ -86,6 +86,32 @@ button{
     font-family: var(--subheading-font);
 }
 
+@media (max-width: 480px) {
+    /* Mobile-specific styles go here */
+    section {
+        padding: 100px 10vw;
+      }
+
+    .section-title{
+        font-size: 12px;
+    }
+    .heading{
+        margin-top: 18px;
+        font-size: 36px;
+    }
+    
+    button{
+        padding: 12px 23px;
+        
+        width: fit-content;
+        height: auto;
+        border-radius: 32px;
+
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
 /*---------------------------------------------------------------------------------------------*/
 /* Hero Section */
 /*---------------------------------------------------------------------------------------------*/
@@ -98,7 +124,6 @@ button{
     width: 100%;
     height: 100vh;
 
-    gap: 80px;
 }
 
 .MP4_Background {
@@ -108,7 +133,13 @@ button{
 
 }
 
-
+.hero .context{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    z-index: 1;
+}
 .hero .text-container{
     display: flex;
     flex-direction: column;
@@ -116,7 +147,7 @@ button{
 
     margin-left: 150px;
     gap: 14px;
-    z-index: 1;
+
 }
 .hero .text-container h1{
     color: var(--text-color);
@@ -137,11 +168,52 @@ button{
     max-width: 780px;
 }
 .hero button{
-    z-index: 1;
     margin-left: 150px;
 }
 
-  
+@media (max-width: 480px) {
+    /* Mobile-specific styles go here */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover; /* Crop the video to fill the container, maintaining aspect ratio */
+    }
+    
+    .MP4_Background {
+        position: relative;
+    }
+    .hero .context{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 48px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    .hero .text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        margin-left: 0px;
+        gap: 40px;
+    }
+    .hero .text-container h1{
+        font-size: 36px;
+        max-width: 430px;
+        text-align: center;
+    }
+    .hero .text-container h4{
+        font-size: 15px;
+        max-width: 388px;
+        text-align: center;
+    }
+
+}
 /*---------------------------------------------------------------------------------------------*/
 /* About Section */
 /*---------------------------------------------------------------------------------------------*/
@@ -176,6 +248,25 @@ button{
 }
 
 
+@media (max-width: 480px) {
+    /* Mobile-specific styles go here */
+    .about-us{
+        gap: 25px;
+        margin-top: 60px;
+    }
+    
+    .about-us .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-us .desc{
+        font-size: 15px; 
+        max-width: 356px;
+    }
+}
 /*---------------------------------------------------------------------------------------------*/
 /* Services Section */
 /*---------------------------------------------------------------------------------------------*/
@@ -264,7 +355,44 @@ button{
     max-width: 260px;
 }
 
-
+@media (max-width: 480px) {
+    /* Mobile-specific styles go here */
+    .services{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 55px;
+    
+        background: none;
+    }
+    .services button{
+        margin-top: 0%;
+    }
+    
+    .services .info{
+        align-items: center;
+        gap: 42px;
+    }
+    .services .info .title{
+        align-items: center;
+    }
+    .services .info .desc{
+        text-align: center;
+        font-size: 15px;
+        max-width: 360px;
+    }
+    
+    .services .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+    }
+    
+}
 
 /*---------------------------------------------------------------------------------------------*/
 /* Process Section */
@@ -338,7 +466,32 @@ button{
     line-height: normal;  
 }
 
+@media (max-width: 480px) {
+    /* Mobile-specific styles go here */
+    .process{
+        gap: 38px;
+    }
+    
+    .process .steps-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .process .steps-container .arrow{
+        margin-top: 0px;
+        transform: rotate(90deg);
+    }
 
+    .process .steps-container .step h4{
+        font-size: 20px;       
+    }
+    .process .steps-container .step p{
+        max-width: 326px;
+        font-size: 14px;
+    }    
+}
 /*---------------------------------------------------------------------------------------------*/
 /* Features Section */
 /*---------------------------------------------------------------------------------------------*/
@@ -408,6 +561,51 @@ button{
     font-size: 14px;
     font-weight: 700;
     line-height: normal;
+}
+
+@media (max-width: 480px) {
+    /* Mobile-specific styles go here */
+    .features{
+        gap: 65px;
+    }
+
+    
+    .features .title h1{
+        margin-bottom: 18px;
+    }
+    .features .title h4{
+        max-width: 331px;
+        font-size: 15px;
+    }
+    
+    .features .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .features .container .middle{
+        width: auto;
+        height: 300px;
+    }
+
+    
+    .features .container .list{
+        align-items: center;
+        gap: 35px;
+    }
+    
+
+    .features .container .list .item h4{
+        font-size: 15px;
+
+    }
+    
+    .features .container .list .item p{
+        font-size: 12px;
+    }
 }
 
 
@@ -492,6 +690,57 @@ button{
     color: var(--accent-color);
 }
 
+
+@media (max-width: 480px) {
+    .hosting-prices{
+        gap: 54px;
+    }
+    
+    
+    .hosting-prices .prices{
+        gap: 18px;
+    }
+    
+    .hosting-prices .container{
+        width: 350px;
+
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 38px;
+    
+        padding: 40px 0px;
+    }
+
+    .hosting-prices .container button{
+        padding: 14px 38px;
+    }
+    
+    .hosting-prices .container .list{
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 0px;
+        column-gap: 0px;
+        margin-left: 0px;
+        gap: 23px;
+    }
+    
+    .hosting-prices .container .list h6{
+        color: #3F3E3E;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: var(--subheading-font);
+    }
+    
+    
+    .hosting-prices .container .list .new{
+        color: var(--accent-color);
+    }
+}
 /*---------------------------------------------------------------------------------------------*/
 /* Website Prices Section */
 /*---------------------------------------------------------------------------------------------*/
@@ -592,6 +841,34 @@ button{
     line-height: normal;
 }
 
+@media (max-width: 480px) {
+    .website-prices{
+        gap: 72px;
+    }
+    
+    
+    .website-prices .title h4{
+        max-width: 351px;   
+        font-size: 15px;
+        margin-top: 18px;
+    }
+    
+    .website-prices .list{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .website-prices .container{
+        padding: 30px 30px;
+        padding-bottom: 105px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+        gap: 60px;
+    }
+}
 
 /*---------------------------------------------------------------------------------------------*/
 /* Contact Section */
@@ -615,5 +892,25 @@ button{
 
     max-width: 861px;
 }
+
+@media (max-width: 480px) {
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        gap: 70px;
+    }
+    .contact button{
+        padding: 12px 47px;
+    }
+    
+    .contact h4{
+        text-align: center;
+        max-width: 319px;
+    }
+}
+
 
 

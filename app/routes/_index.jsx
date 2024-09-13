@@ -1,25 +1,6 @@
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
-import BubbleCurve, {
-  links as bubbleCurveLinks,
-} from "../components/svgs/BubbleCurve";
-import TopBookCurve, {
-  links as topBookCurveLinks,
-} from "../components/svgs/TopBookCurve";
-import BottomBookCurve, {
-  links as bottomOfBookCurveLinks,
-} from "../components/svgs/BottomOfBookCurve";
-import GraidentCard, {
-  links as gradientCardLinks,
-} from "../components/index/homeGradientCard";
-import GrayBox, {
-  links as grayBoxLinks,
-} from "../components/index/homeSmallGrayBox";
-import DynamicGrayBox, {
-  links as dynamicGrayBoxLinks,
-} from "../components/index/homeBigGrayBox";
 
 import { useEffect, useRef } from "react";
-
 
 import Footer, { links as footerLinks } from "../components/index/Footer";
 import style from "../styles/index/home.css";
@@ -60,13 +41,16 @@ export default function Index() {
           </video>
         </div>
         
-        <div className="text-container">
-          <h1>Bring Your Business Online, Seamlessly</h1>
+        <div className="context">
+          <div className="text-container">
+            <h1>Bring Your Business Online, Seamlessly</h1>
 
-          <h4>Personalized websites, apps, and design services to reflect your vision and grow your brand.</h4>
+            <h4>Personalized websites, apps, and design services to reflect your vision and grow your brand.</h4>
+          </div>
+
+          <button><h4>Get Started</h4></button>
         </div>
-
-        <button><h4>Get Started</h4></button>
+        
       </div>
 
       <section style={{ backgroundColor: "var(--Background-1)" }}>
@@ -243,7 +227,7 @@ export default function Index() {
                 </div>
               </div>
 
-              <img src="./imgs/index/cloud-portal.png"/>
+              <img src="./imgs/index/cloud-portal.png" className="middle"/>
 
               <div className="list">
                 <div className="item">
