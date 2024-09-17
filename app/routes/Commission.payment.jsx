@@ -110,15 +110,18 @@ export default function Commission() {
       <NavBar />
       <div className="columnContainer">
         <section>
-          <h1 className="gradientTitle">Let's begin our process for your Dream Site</h1>
+          <h1 className="gradientTitle Title">Let's begin the process for your Dream Site</h1>
         </section>
 
           <section>
             <div className="commissionContainer">
               <div className="columnContainer">
                 <img src="../imgs/pay_bill.gif" />
-                <p style={{ fontSize: "31px" }}>Commission Fee</p>
-                <p>$50</p>
+                <div>
+                  <p className='subtitle'>Commission Fee</p>
+                  <p className='price'>$50</p>
+                </div>
+                
                 <span className="smallDivider"></span>
                 <p className="commissionFeeP">
                 To kickstart your website journey, we just need to secure a commission fee. This sets the stage for our exciting collaboration and the beginning of our creative process. <br></br> (This price can not be refunded).

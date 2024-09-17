@@ -42,6 +42,7 @@ header .navBtn {
   color: var(--color-white);
   font-size: 1.5em;
   z-index: 1;
+  background: none;
   
 }
 

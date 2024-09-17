@@ -29,7 +29,7 @@
 }
 
 .calendar-dropdown {
-  width: 350px;
+  width: 400px;
   height: 100%;
   position: relative;
   padding: 20px;
@@ -49,7 +49,7 @@
 .header h4 {
   margin: 0;
   text-transform: capitalize;
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-weight: bold;
 }
 
@@ -128,17 +128,16 @@
   color: #fff;
   opacity: 1;
 
+
 }
 .month-day.current.selected {
-  background: #45f3ff;
-  border-radius: 50%;
+  background: #00CFFF;
   box-shadow: 0 0 1.5rem 1rem rgba(17, 206, 239, 0.3);
   color: #fff;
   opacity: .9;
 }
 .month-day:hover {
-  background: #A856D7;
-  border-radius: 50%;
+  background: #e252d8;
   box-shadow: 0 0 1.5rem 1rem rgba(239, 17, 239, 0.3);
   color: #fff;
   opacity: .9;

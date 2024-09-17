@@ -24,6 +24,9 @@ section {
   font-family: var(--font-righteous);
   list-style: none;
 }
+.commissionContainer .subtitle{
+  font-size: 31px;
+}
 
 .commissionContainer p {
   font-size: 24px;
@@ -78,4 +81,40 @@ input[type="radio"]:checked:after {
   background-color: var(--color-light-grey);
   padding: 16px;
   width: 600px;
+}
+
+
+@media (max-width: 480px) {
+  .Title{
+    max-width: 400px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .commissionContainer {
+    background-color: var(--color-light-grey);
+    padding: 24px 0px;
+    max-width: 350px;
+  }
+
+  .columnContainer{
+    
+  }
+
+  .commissionContainer img{
+    height: 100px;
+    width: auto;
+  }
+
+  .commissionContainer .subtitle{
+    font-size: 24px;
+  }
+  .commissionContainer .price{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .commissionContainer p{
+    font-size: 16px;
+    max-width: 300px;
+  }
 }

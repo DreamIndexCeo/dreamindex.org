@@ -32,6 +32,9 @@ const Calendar = ({
   className,
   id,
   Data,
+  Offweekdays,
+  Offdays,
+  EventState,
   value,
   name, 
   ...attrs 
@@ -99,7 +102,7 @@ const Calendar = ({
     
   }
 
-  function filterByBookedDate(arr, month, day, year) {
+  function filterByBookedDate(arr, month, day, year) { //checking if the current date is booked by a client
     
     const filter = arr.filter(item => (
       item.BookedDate.Month === month &&
@@ -116,16 +119,37 @@ const Calendar = ({
     */
     return filter
   }
+
+  function filterByWeekDay(month, day, year) { // checking if the current date wekday is avaliable for booking
+    // Create a Date object
+    const date = new Date(year, month - 1, day); // month - 1 because months are 0-indexed in JS
+    // Get the day of the week as an integer (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+    const dayOfWeek = date.getDay();
+    // Map the integer to the corresponding weekday name
+    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    const value = weekdays[dayOfWeek];
+
+    const result = Offweekdays[0].weekDays[value]
+    //console.log(month, day, year, dayOfWeek, result)
+
+    return result;
+  }
+
+  function filterByOffDay(month, day, year){
+
+    const filter = Offdays.filter(item => (
+      item.Date.month === month &&
+      item.Date.day === day &&
+      item.Date.year === year
+    ));
+
+    return filter
+  }
   
 
     return (
-      <>
-        <input
-          name={id}
-          id="dateValue"
-          value={selectedDate}
-        />
-
+      <div className="group">
         <div className='calendar-dropdown'>
           <div className='header'>
             <a onClick={prevMonth}></a>
@@ -152,11 +176,20 @@ const Calendar = ({
               <>
                 { new Date(`${currentMonth+1}/${day+1}/${currentYear}`) > today.setHours(0,0,0,0)? (
                   <>
-                    { !filterByBookedDate(Data, currentMonth+1, day+1, currentYear).length ?(
-                      <div className='month-day current' key={day+1} id={id+day+1} onClick={() => { selectDate(day+1), filterByBookedDate(Data, currentMonth+1, day+1, currentYear), Click(id+day+1)}}>{day+1}</div>
+                    { !filterByWeekDay(currentMonth+1, day+1, currentYear) || filterByOffDay(currentMonth+1, day+1, currentYear).length ?(
+                      <>
+                        <div className='month-day' key={day+1} id={id+day+1} onClick={() => {}}>{day+1}</div>
+                      </>
                     ):(
-                      <div className='month-day current meeting' key={day+1} id={id+day+1} onClick={() => {}}>{day+1}</div>
+                      <>
+                        { !filterByBookedDate(Data, currentMonth+1, day+1, currentYear).length ?(
+                          <div className='month-day current' key={day+1} id={id+day+1} onClick={() => { selectDate(day+1), filterByBookedDate(Data, currentMonth+1, day+1, currentYear), Click(id+day+1)}}>{day+1}</div>
+                        ):(
+                          <div className='month-day current meeting' key={day+1} id={id+day+1} onClick={() => {}}>{day+1}</div>
+                        )}
+                      </>
                     )}
+                    
                   </>
                   
                 ) : (
@@ -173,7 +206,12 @@ const Calendar = ({
           </div>
 
         </div>
-      </>
+        <input
+          name={id}
+          id="dateValue"
+          value={selectedDate}
+        />
+      </div>
     );
   };
 

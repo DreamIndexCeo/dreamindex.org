@@ -25,6 +25,22 @@ type FeedbackCreated {
   Year  Int
 }
 
+type DaysOffDate {
+  day   Int
+  month Int
+  year  Int
+}
+
+type DaysOffWeekDays {
+  Friday    Boolean
+  Monday    Boolean
+  Saturday  Boolean
+  Sunday    Boolean
+  Thursday  Boolean
+  Tuesday   Boolean
+  Wednesday Boolean
+}
+
 
 
 type ProjectProgressComments {
@@ -58,12 +74,21 @@ model Clients {
   root_password String  @map("root-password")
   status        Boolean
   website       String
+  feedback      Feedback[]
 }
 
 model Codes {
   id         String  @id @default(auto()) @map("_id") @db.ObjectId
   AccessCode String
   Status     Boolean
+}
+
+model Days_Off {
+  id       String           @id @default(auto()) @map("_id") @db.ObjectId
+  Date     DaysOffDate?
+  weekDays DaysOffWeekDays?
+
+  @@map("Days-Off")
 }
 
 model Feedback {
@@ -73,6 +98,7 @@ model Feedback {
   Status  Boolean
   Subject String
   userID  String          @db.ObjectId
+  user    Clients         @relation(fields: [userID], references: [id])
 }
 
 model Forms {

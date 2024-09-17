@@ -84,6 +84,8 @@ button{
     font-size: 1.25rem;
     line-height: normal;
     font-family: var(--subheading-font);
+
+    cursor: pointer;
 }
 
 @media (max-width: 480px) {

@@ -34,9 +34,10 @@ export default function route(){
     useEffect(() => {
         setTimeout(() => {
             if (taskid.routeid == "commission-mail"){
-                navigate("/commission/success")
+                navigate("/commission/success");
             } else if (taskid.routeid == "commission-form"){
-                navigate("/commission/submitted")
+                localStorage.clear();
+                navigate("/commission/submitted");
             } 
         }, 2500);
     }, []);

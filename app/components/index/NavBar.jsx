@@ -7,6 +7,7 @@ import { FaBars, FaTimes, FaUser } from "react-icons/fa/index.js";
 export default function NavBar() {
   const navRef = useRef();
   const showNavBar = () => {
+    console.log("display")
     navRef.current.classList.toggle("navBarContainer");
   };
 

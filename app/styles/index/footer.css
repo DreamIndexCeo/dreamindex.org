@@ -32,6 +32,12 @@ footer .left{
 
     gap: 18px;
 }
+footer .left .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 footer .left .info{
     display: flex;
     flex-direction: column;
