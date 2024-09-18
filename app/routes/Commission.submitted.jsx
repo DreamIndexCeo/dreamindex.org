@@ -14,20 +14,20 @@ export default function SubmittedPayment() {
         <h1>Your Form Has Been Submitted</h1>
 
         <div className="boxContainer">
-          <img src="../imgs/gifs/sentAirplane.gif" style={{ width: "200px" }} />
+          <img src="../imgs/gifs/sentAirplane.gif" className='gif'/>
 
-          <div style={{ width: "400px", textAlign: "center" }}>
+          <div style={{textAlign: "center" }}>
             <h2>
               Your Quote has been send to us. During this time of waiting, we
               suggest get everything you would like to show case to your
               designer during your meeting
             </h2>
           </div>
-          <div style={{ width: "500px", textAlign: "center" }}>
-            <h2>
+          <div style={{textAlign: "center" }}>
+            <p>
               (You will receive a text and email reminder a day before your
               Meeting)
-            </h2>
+            </p>
           </div>
           <button>
             <Link className="homeButton" to="/">

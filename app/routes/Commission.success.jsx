@@ -16,14 +16,14 @@ export default function SubmittedPayment() {
         <h1>Your Payment has been received</h1>
 
         <div className="boxContainer">
-          <img src="../imgs/gifs/sentAirplane.gif" style={{ width: "200px" }} />
+          <img src="../imgs/gifs/sentAirplane.gif" className='gif'/>
 
-          <div style={{ width: "400px", textAlign: "center" }}>
+          <div style={{ textAlign: "center" }}>
             <h2>
             Thank you for your payment! We're thrilled to have you on board! Get ready to dive in—we'll be sending you a link to your consultation form along with an access code shortly. Your exciting journey with us starts now!
             </h2>
           </div>
-          <div style={{ width: "500px", textAlign: "center" }}>
+          <div style={{ textAlign: "center" }}>
             <p>
               Look out for your email in the next 30 mins
             </p>

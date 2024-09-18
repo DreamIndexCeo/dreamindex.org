@@ -48,7 +48,7 @@ export default function Index() {
             <h4>Personalized websites, apps, and design services to reflect your vision and grow your brand.</h4>
           </div>
 
-          <button><h4>Get Started</h4></button>
+          <Link to='/services'><button><h4>Get Started</h4></button></Link>
         </div>
         
       </div>
@@ -74,7 +74,7 @@ export default function Index() {
             </div>
 
             <p className="desc">At Dream Index, we offer a full range of digital solutions tailored to help your business thrive online. Our services include custom website development, mobile app creation, professional graphic design, and reliable 24/7 hosting. With our 9-5 service assistance, we ensure your digital presence is always supported, allowing you to focus on your business while we handle the technical details</p>
-            <button><h4>Explore Our Services</h4></button>
+            <Link to='/services'><button><h4>Explore Our Services</h4></button></Link>
           </div>
 
           <div className="card-container">
@@ -281,7 +281,7 @@ export default function Index() {
                 <h6>9/5 Live Support</h6>
               </div>
 
-              <button>Get Started</button>
+              <Link to='/hosting'><button>Get Started</button></Link>
             </div>
 
             <div className="container">
@@ -300,7 +300,7 @@ export default function Index() {
                 <h6 className="new">+ Search Engine Submissions</h6>
               </div>
 
-              <button>Get Started</button>
+              <Link to='/hosting'><button>Get Started</button></Link>
             </div>
 
             <div className="container">
@@ -319,7 +319,7 @@ export default function Index() {
                 <h6 className="new">+ SEO Optimization </h6>
               </div>
 
-              <button>Get Started</button>
+              <Link to='/hosting'><button>Get Started</button></Link>
             </div>
           </div>
         </div>
@@ -408,7 +408,7 @@ export default function Index() {
       <section className="starryBackground">
         <div className="contact">
           <h4>If you have any questions about our services, feel free to contact us anytime. We're here to help and provide the information you need to get started!</h4>
-          <button>Contact Us</button>
+          <Link to=""><button>Contact Us</button></Link>
         </div>
       </section>
 

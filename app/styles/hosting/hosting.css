@@ -7,6 +7,9 @@ body {
   font-family: var(--font-rowdies);
   max-width: 600px;
   text-align: center;
+  @media(max-width:480px){
+    font-size: 0.8em;
+  }
 }
 .titleContainer {
   display: flex;

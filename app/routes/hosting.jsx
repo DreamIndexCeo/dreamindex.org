@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import styles from "../styles/hosting/hosting.css";
+import Footer, { links as footerLinks } from "../components/index/Footer";
 export const meta = () => {
   return [{ title: "DreamIndex || Services" }];
 };
@@ -111,10 +112,11 @@ export default function Services() {
           </div>
         </div>
       </section>
+      <Footer/>
     </body>
   );
 }
 
 export function links() {
-  return [...navBarLinks(), { rel: "stylesheet", href: styles }];
+  return [...navBarLinks(),...footerLinks(), { rel: "stylesheet", href: styles }];
 }

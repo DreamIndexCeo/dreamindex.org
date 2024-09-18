@@ -6,6 +6,8 @@ import PriceBox, {
   links as priceBoxLinks,
 } from "../components/services/priceBox";
 import styles from "../styles/services/services.css";
+
+import Footer, { links as footerLinks } from "../components/index/Footer";
 export const meta = () => {
   return [{ title: "DreamIndex || Services" }];
 };
@@ -23,9 +25,8 @@ export default function Services() {
           <p>
             Offering options for
             <span style={{ color: "red" }}> 4 months financing</span> to give
-            you
+            you more flexibility
           </p>
-          <p> more flexibility</p>
         </div>
       </section>
 
@@ -144,6 +145,8 @@ export default function Services() {
           </div>
         </section>
       </div>
+
+      <Footer/>
     </body>
   );
 }
@@ -151,6 +154,7 @@ export default function Services() {
 export function links() {
   return [
     ...navBarLinks(),
+    ...footerLinks(),
     ...priceBoxLinks(),
     ...addOnCardLinks(),
     { rel: "stylesheet", href: styles },

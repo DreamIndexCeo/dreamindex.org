@@ -60,8 +60,6 @@ section {
 
 .starryBackground {
   background-image: url("/imgs/starry_background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .astronaut {
@@ -119,6 +117,10 @@ section {
 
 .gradientTitle {
   font-size: 4em;
+  @media (max-width: 480px){
+    font-size: 2em;
+    text-align: center;
+  }
 }
 
 
