@@ -74,6 +74,7 @@ export async function action({request, params}){
     return {Data};
 
   } else if(id == "section4"){
+    console.log(formData.get("InfoData"))
     const Info = JSON.parse(formData.get("InfoData"));
 
     const id_Key = String(Info.Data.id_Key);
