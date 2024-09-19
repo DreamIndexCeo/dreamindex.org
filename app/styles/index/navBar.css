@@ -1,8 +1,8 @@
 header nav{
-  z-index: 1;
+  z-index: 2;
 }
 header .logo{
-  z-index: 1;
+  z-index: 2;
 }
 nav a {
   margin: 16px;
@@ -41,7 +41,7 @@ header .navBtn {
   opacity: 0;
   color: var(--color-white);
   font-size: 1.5em;
-  z-index: 1;
+  z-index: 2;
   background: none;
   
 }
@@ -66,7 +66,7 @@ header .navBtn {
     gap: 1.5rem;
     background-color: var(--color-black);
     transform: translateY(-100vh);
-    z-index: 1;
+    z-index: 3;
   }
 
   nav div {
