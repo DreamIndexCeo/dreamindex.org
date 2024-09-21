@@ -2,6 +2,7 @@ import { useNavigate, useParams, useLoaderData } from "@remix-run/react";
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import styles from "../styles/services/loader.css";
 import { FormLink } from "../server/SendEmail";
+import { NewClient } from "../server/DINA";
 import { useState, useEffect } from "react";
 import { parse } from 'cookie';
 
@@ -20,6 +21,9 @@ export async function loader({ params, request  }){
     //reading the params data to send a email
     if (params.routeid == "commission-mail"){
         FormLink(email);
+    }
+    else if(params.routeid == "commission-form"){
+        NewClient();
     }
     
 
