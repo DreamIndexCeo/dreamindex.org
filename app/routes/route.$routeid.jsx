@@ -19,10 +19,10 @@ export async function loader({ params, request  }){
     const email = cookies.email;
 
     //reading the params data to send a email
-    if (params.routeid == "commission-mail"){
+    if (params.routeid == "consultation-mail"){
         FormLink(email);
     }
-    else if(params.routeid == "commission-form"){
+    else if(params.routeid == "consultation-form"){
         NewClient();
     }
     
@@ -37,11 +37,11 @@ export default function route(){
 
     useEffect(() => {
         setTimeout(() => {
-            if (taskid.routeid == "commission-mail"){
-                navigate("/commission/success");
-            } else if (taskid.routeid == "commission-form"){
+            if (taskid.routeid == "consultation-mail"){
+                navigate("/consultation/success");
+            } else if (taskid.routeid == "consultation-form"){
                 localStorage.clear();
-                navigate("/commission/submitted");
+                navigate("/consultation/submitted");
             } 
         }, 2500);
     }, []);

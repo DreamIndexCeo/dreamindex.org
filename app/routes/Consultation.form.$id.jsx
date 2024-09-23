@@ -9,7 +9,7 @@ import { Calendar, ColorPicker } from '../components/index.js';
 import { useParams, useNavigate} from "@remix-run/react";
 
 export const meta = () => {
-  return [{ title: "DreamIndex || Commission Form" }];
+  return [{ title: "DreamIndex || consultation Form" }];
 };
 
 //---------------------------------------------------------------------------------------
@@ -161,7 +161,7 @@ export async function action({request, params}){
       }
     });
 
-    return redirect("/route/commission-form")
+    return redirect("/route/consultation-form")
   }
 
 }
@@ -206,19 +206,19 @@ export default function ContactForm() {
         console.log(JSON.stringify(actionData))
         // Save the returned action data to localStorage as a JSON string
         localStorage.setItem("Info", JSON.stringify(actionData));
-        navigate("/commission/form/section2");
+        navigate("/consultation/form/section2");
       }
       else if(section.id == "section2"){
         console.log(JSON.stringify(actionData))
         // Save the returned action data to localStorage as a JSON string
         localStorage.setItem("Vision", JSON.stringify(actionData));
-        navigate("/commission/form/section3");
+        navigate("/consultation/form/section3");
       }
       if(section.id == "section3"){
         console.log(JSON.stringify(actionData))
         // Save the returned action data to localStorage as a JSON string
         localStorage.setItem("Style", JSON.stringify(actionData));
-        navigate("/commission/form/section4");
+        navigate("/consultation/form/section4");
       }
     }
   }, [actionData]);

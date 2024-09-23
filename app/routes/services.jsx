@@ -37,7 +37,7 @@ export default function Services() {
           </div>
           <div className="businessMeeting">
             <p className="desc">
-              After Paying the Commission, you'll be able to fill out a
+              After Paying the consultation, you'll be able to fill out a
               consolation form to give up front information about your vision.
             </p>
             <p className="desc">

@@ -152,7 +152,7 @@ export default function Index() {
               
               <div>
                 <h4>Consultation Form </h4>
-                <p>After paying the commission, fill out a consultation form to share your vision.</p>
+                <p>After paying the consultation, fill out a consultation form to share your vision.</p>
               </div>
             </div>
 

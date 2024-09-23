@@ -27,7 +27,7 @@ export default function PriceBox({
           {listItemThree}
         </li>
       </ul>
-      <Link to="/commission/payment">
+      <Link to="/consultation/payment">
         <button>
           <p>Get Started</p>
         </button>

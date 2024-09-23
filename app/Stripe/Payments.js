@@ -13,6 +13,10 @@ export async function createPaymentIntent() {
     return await stripe.paymentIntents.create({
         amount: 15000,
         currency: 'usd',
+        metadata: {
+            name: customerName,
+            description: customerDescription,
+        },
         automatic_payment_methods: {
             enabled: true
         }
@@ -26,16 +30,22 @@ export async function createDepositIntent() {
     return await stripe.paymentIntents.create({
         amount: 15000,
         currency: 'usd',
+        metadata: {
+            product_name: "Website Deposit Payment",
+        },
         automatic_payment_methods: {
             enabled: true
         }
     })
 }
 
-export async function createCommissionIntent() {
+export async function createconsultationIntent() {
     return await stripe.paymentIntents.create({
         amount: 5000,
         currency: 'usd',
+        metadata: {
+            product_name: "Website Consultation Payment",
+        },
         automatic_payment_methods: {
             enabled: true
         }
