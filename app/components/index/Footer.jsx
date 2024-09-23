@@ -23,8 +23,8 @@ export default function Footer() {
                 <img src="./imgs/footer/email.svg"/>
               </div>
               <div>
-                <p>Contact: Contact@dreamindex.org</p>
-                <p>Support: Support@dreamindex.org</p>
+                <p>Contact: <a href="mailto:contact@dreamindex.org">Contact@dreamindex.org</a></p>
+                <p>Support: <a href="mailto:support@dreamindex.org">Support@dreamindex.org</a></p>
               </div>
               
             </div>

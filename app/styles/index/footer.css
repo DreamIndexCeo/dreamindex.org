@@ -11,13 +11,16 @@ footer{
     align-items: center;
 
 }
-footer p{
+footer p, a{
     color: #3F3E3E;
     font-family: Kanit;
     font-size: 20px;
     font-style: italic;
     font-weight: 400;
     line-height: normal;
+}
+footer a{
+    color: #797878;
 }
 footer .line{
     width: 3px;
