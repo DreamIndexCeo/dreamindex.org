@@ -31,6 +31,7 @@ const Calendar = ({
   today = new Date(),
   className,
   id,
+  DateSelector,
   Data,
   Offweekdays,
   Offdays,
@@ -174,33 +175,46 @@ const Calendar = ({
 
             {[...Array(daysInMonth).keys()].map((day) => (
               <>
-                { new Date(`${currentMonth+1}/${day+1}/${currentYear}`) > today.setHours(0,0,0,0)? (
+                { DateSelector == true ? (
                   <>
-                    { !filterByWeekDay(currentMonth+1, day+1, currentYear) || filterByOffDay(currentMonth+1, day+1, currentYear).length ?(
+                    { new Date(`${currentMonth+1}/${day+1}/${currentYear}`) > today.setHours(0,0,0,0)? (
+                      <div className='month-day current' key={day+1} id={id+day+1} onClick={() => { selectDate(day+1), Click(id+day+1)}}>{day+1}</div>              
+                    ) : (
+                      <div className='month-day' key={day+1} onClick={() => {}}>{day+1}</div>
+                    )}
+                  </>
+                ):(
+                  <>
+                    { new Date(`${currentMonth+1}/${day+1}/${currentYear}`) > today.setHours(0,0,0,0)? (
                       <>
-                        <div className='month-day' key={day+1} id={id+day+1} onClick={() => {}}>{day+1}</div>
+                        { !filterByWeekDay(currentMonth+1, day+1, currentYear) || filterByOffDay(currentMonth+1, day+1, currentYear).length ?(
+                          <>
+                            <div className='month-day' key={day+1} id={id+day+1} onClick={() => {}}>{day+1}</div>
+                          </>
+                        ):(
+                          <>
+                            { !filterByBookedDate(Data, currentMonth+1, day+1, currentYear).length ?(
+                              <div className='month-day current' key={day+1} id={id+day+1} onClick={() => { selectDate(day+1), filterByBookedDate(Data, currentMonth+1, day+1, currentYear), Click(id+day+1)}}>{day+1}</div>
+                            ):(
+                              <div className='month-day current meeting' key={day+1} id={id+day+1} onClick={() => {}}>{day+1}</div>
+                            )}
+                          </>
+                        )}
+                        
                       </>
-                    ):(
+                      
+                    ) : (
                       <>
                         { !filterByBookedDate(Data, currentMonth+1, day+1, currentYear).length ?(
-                          <div className='month-day current' key={day+1} id={id+day+1} onClick={() => { selectDate(day+1), filterByBookedDate(Data, currentMonth+1, day+1, currentYear), Click(id+day+1)}}>{day+1}</div>
+                          <div className='month-day' key={day+1} onClick={() => {}}>{day+1}</div>
                         ):(
-                          <div className='month-day current meeting' key={day+1} id={id+day+1} onClick={() => {}}>{day+1}</div>
+                          <div className='month-day meeting' key={day+1} onClick={() => {}}>{day+1}</div>
                         )}
                       </>
                     )}
-                    
-                  </>
-                  
-                ) : (
-                  <>
-                    { !filterByBookedDate(Data, currentMonth+1, day+1, currentYear).length ?(
-                      <div className='month-day' key={day+1} onClick={() => {}}>{day+1}</div>
-                    ):(
-                      <div className='month-day meeting' key={day+1} onClick={() => {}}>{day+1}</div>
-                    )}
                   </>
                 )}
+                
               </>
             ))}
           </div>

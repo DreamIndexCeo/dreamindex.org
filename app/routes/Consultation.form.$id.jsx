@@ -763,7 +763,7 @@ export default function ContactForm() {
                     please select your deadline date:
                   </label>
 
-                  <Calendar Data={data} Offdays={offDays} Offweekdays={offweekDays} id="Deadline"/>
+                  <Calendar DateSelector={true} id="Deadline"/>
                 </div>
               </div>
 
