@@ -24,7 +24,7 @@ export default function Services() {
         <div className="flexParagraph">
           <p>
             Offering options for
-            <span style={{ color: "red" }}> 4 months financing</span> to give
+            <span style={{ color: "red" }}> Monthly Financing</span> to give
             you more flexibility
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function Services() {
       </div>
 
       <div>
-        <section className="columnContainer">
+        <section className="columnContainer starryBackground">
           <h1>Addons</h1>
 
           <div className="rowContainer">

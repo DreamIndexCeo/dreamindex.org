@@ -65,7 +65,7 @@ h1, h2, h3 {
     font-weight: 400;
     line-height: normal;
 
-    background: linear-gradient(89deg, #FF4B2B 0.34%, #FF416C 99.28%);
+    background: linear-gradient(to bottom, #e252d8 10%, #6ecbf5 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -631,6 +631,17 @@ button{
     align-items: center;
 }
 
+.hosting-prices .title h4{
+    color: var(--text-color);
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: 400;
+    line-height: normal;
+}
+
+
 .hosting-prices .prices{
     display: flex;
     flex-direction: column;
@@ -680,7 +691,7 @@ button{
 }
 
 .hosting-prices .container .list h6{
-    color: #3F3E3E;
+    color: var(--text-color);
     text-align: center;
     font-size: 20px;
     font-weight: 400;
@@ -698,6 +709,10 @@ button{
         gap: 54px;
     }
     
+    .hosting-prices .title h4{
+        max-width: 331px;
+        font-size: 15px;
+    }
     
     .hosting-prices .prices{
         gap: 18px;
@@ -731,7 +746,6 @@ button{
     }
     
     .hosting-prices .container .list h6{
-        color: #3F3E3E;
         text-align: center;
         font-size: 15px;
         font-weight: 400;

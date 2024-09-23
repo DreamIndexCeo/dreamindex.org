@@ -25,17 +25,58 @@ export default function ContactUs() {
           />
         </div>
         <p className="topicLabel">Topic:</p>
-        <div>
-          <button className="pillButton"></button>
+
+        <div className="topics">
+          <div class="button-group">
+            <input type="radio" id="1" name="subject" />
+            <label for="1">Website Development Inquiries</label>
+          </div>
+
+          <div class="button-group">
+            <input type="radio" id="2" name="subject" />
+            <label for="2">Mobile App Development</label>
+          </div>
+
+          <div class="button-group">
+            <input type="radio" id="3" name="subject" />
+            <label for="3">Graphic Design Services</label>
+          </div>
+
+          <div class="button-group">
+            <input type="radio" id="4" name="subject" />
+            <label for="4">Pricing and Payment Plans</label>
+          </div>
+
+          <div class="button-group">
+            <input type="radio" id="5" name="subject" />
+            <label for="5">Hosting and Maintenance</label>
+          </div>
+
+          <div class="button-group">
+            <input type="radio" id="6" name="subject" />
+            <label for="6">Consultation Booking</label>
+          </div>
+
+          <div class="button-group">
+            <input type="radio" id="7" name="subject" />
+            <label for="7">Cloud Portal Featuress</label>
+          </div>
+
+          <div class="button-group">
+            <input type="radio" id="8" name="subject" />
+            <label for="8">Other</label>
+          </div>
         </div>
+        
+
         <div class="inputGroup">
           <label class="inputLabel">Tell Us In Detail</label>
           <input
             autocomplete="off"
-            name="Email"
-            id="Email"
+            name="Content"
+            id="Content"
             class="biggerInput"
-            type="email"
+            type="text"
           />
         </div>
         <button>

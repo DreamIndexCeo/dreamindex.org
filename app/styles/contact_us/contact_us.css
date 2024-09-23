@@ -132,3 +132,39 @@
 .biggerInput:focus .input:focus {
   color: var(--color-black);
 }
+
+/*---------------------Time Containers-----------------------*/
+
+.topics{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.button-group {
+
+}
+
+.button-group input[type="radio"] {
+  display: none;
+}
+
+.button-group label {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #8A00E6;
+  border-radius: 23px;
+  background: var(--color-white);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  transition: all ease 0.2s;
+  text-align: center;
+  font-size: 13px;
+}
+
+.button-group input[type="radio"]:checked + label {
+  background-color: #8A00E6;
+  color: white;
+  border: 1px solid #8A00E6;
+}

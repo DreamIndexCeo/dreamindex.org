@@ -281,6 +281,7 @@ export default function Index() {
           <div className="title">
             <p className="section-title">PRICING</p>
             <h1 className="heading">Hosting Pricing</h1>
+            <h4>*All Greater Options Include Pervious Version Features*</h4>
           </div>
 
           <div className="prices">
@@ -331,7 +332,7 @@ export default function Index() {
               <div className="list">
                 <h6 className="new">+ Increased Performance</h6>
                 <h6 className="new">+ Account System Database</h6>
-                <h6 className="new">+ Unlimitless Database Storage </h6>
+                <h6 className="new">+ Limitless Database Storage</h6>
                 <h6 className="new">+ 24/7 Live Support</h6>
                 <h6>Custom Domain Name</h6>
                 <h6 className="new">+ SEO Optimization </h6>
@@ -347,7 +348,7 @@ export default function Index() {
         <div className="website-prices">
           <div className="title">
             <p className="section-title">PRICES</p>
-            <h1 className="heading">Our Priceing</h1>
+            <h1 className="heading">Our Pricing</h1>
             <h4>We offer competitive monthly fees for our services, including flexible payment options. After a $150 deposit, you can choose to pay the remaining balance either upfront or through monthly installments with Klarna or our personal financing option at a 10% interest rate.</h4>
           </div>
 
@@ -426,7 +427,7 @@ export default function Index() {
       <section className="starryBackground">
         <div className="contact">
           <h4>If you have any questions about our services, feel free to contact us anytime. We're here to help and provide the information you need to get started!</h4>
-          <Link to=""><button>Contact Us</button></Link>
+          <a href="mailto:Contact@dreamindex.org"><button>Contact Us</button></a>
         </div>
       </section>
 
