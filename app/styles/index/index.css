@@ -155,35 +155,7 @@ section {
   align-items: center;
 }
 
-.services {
-  background-color: var(--color-off-black);
-  position: relative;
-}
 
-.websiteProcess {
-  background-color: var(--color-light-grey);
-  position: relative;
-}
-.dreamsite {
-  background-color: var(--color-grey);
-  position: relative;
-  text-align: right;
-  color: var(--color-black);
-}
-
-#computerLogo {
-  width: 500px;
-}
-
-.dica {
-  background-color: var(--color-black);
-  position: relative;
-  gap: 2em;
-}
-
-.dica img {
-  padding: 0px 30px;
-}
 
 @media only screen and (max-width: 1500px) {
   #computerLogo {

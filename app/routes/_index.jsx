@@ -91,7 +91,7 @@ export default function Index() {
               <h1 className="heading">Our Services</h1>
             </div>
 
-            <p className="desc">At Dream Index, we offer a full range of digital solutions tailored to help your business thrive online. Our services include custom website development, mobile app creation, professional graphic design, and reliable 24/7 hosting. With our 9-5 service assistance, we ensure your digital presence is always supported, allowing you to focus on your business while we handle the technical details</p>
+            <p className="desc">At Dream Index, we offer a full range of digital solutions tailored to help your business thrive online. Our services include custom website development, mobile app creation, professional graphic design, and reliable 24/7 hosting. With our service assistance, we ensure your digital presence is always supported, allowing you to focus on your business while we handle the technical details</p>
             <Link to='/services'><button><h4>Explore Our Services</h4></button></Link>
           </div>
 
@@ -203,7 +203,7 @@ export default function Index() {
               
               <div>
                 <h4>Payment Options & Launch</h4>
-                <p>Once your site is ready, you can choose to pay the remaining balance in full or through monthly payments via Klarna or our personal financing option with a 10% interest fee. After payment, you’ll receive login access to our Cloud Portal to manage your website.</p>
+                <p>Once your site is ready, you can choose to pay the remaining balance in full or through monthly payments via <b style={{color: "var(--accent-color)"}}>Klarna</b> or our <b style={{color: "var(--accent-color)"}}>personal financing option with a 10% interest fee</b>. After payment, you’ll receive login access to our Cloud Portal to manage your website.</p>
               </div>
             </div>
           </div>
@@ -223,8 +223,8 @@ export default function Index() {
                 <div className="item">
                   <img src="./imgs/index/site.svg"/>
                   <div>
-                    <h4>Website Manager</h4>
-                    <p>Avaliable</p>
+                    <h4>Manage Website</h4>
+                    <p>Available</p>
                   </div>
                 </div>
 
@@ -232,7 +232,7 @@ export default function Index() {
                   <img src="./imgs/index/analytics.svg"/>
                   <div>
                     <h4 style={{color: "var(--secondary-color)",}}>Dashboard Analytics</h4>
-                    <p>Avaliable</p>
+                    <p>Available</p>
                   </div>
                 </div>
 
@@ -251,8 +251,8 @@ export default function Index() {
                 <div className="item">
                   <img src="./imgs/index/diversification.svg"/>
                   <div>
-                    <h4 style={{color: "var(--secondary-color)",}}>Subscription Manager</h4>
-                    <p>Avaliable</p>
+                    <h4 style={{color: "var(--secondary-color)",}}>Subscription Management</h4>
+                    <p>Available</p>
                   </div>
                 </div>
 
@@ -267,8 +267,8 @@ export default function Index() {
                 <div className="item">
                   <img src="./imgs/index/schedule.svg"/>
                   <div>
-                    <h4 style={{color: "var(--secondary-color)",}}>Appointment Manager</h4>
-                    <p>Avaliable</p>
+                    <h4 style={{color: "var(--secondary-color)",}}>Appointment Management</h4>
+                    <p>Available</p>
                   </div>
                 </div>
               </div>
@@ -408,8 +408,8 @@ export default function Index() {
               <div className="desc">
                 <img src="./imgs/index/custom-website.svg"/>
                 <h5>Custom Website</h5>
-                <div>
-                  <h3>$50 - 10K</h3>
+                <div className="group">
+                  <h3>$500 - 10K</h3>
                   <p>Need a custom request the is not listed? We’ll hear out your million dollar idea and determine a price with you.</p>
                 </div>
               </div>

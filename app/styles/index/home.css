@@ -86,7 +86,9 @@ button{
     font-family: var(--subheading-font);
 
     cursor: pointer;
+    box-shadow: 0px 4px 19.2px 0px #402453 inset;
 }
+
 
 @media (max-width: 480px) {
     /* Mobile-specific styles go here */
@@ -819,6 +821,16 @@ button{
 
     text-align: center;
 }
+
+.website-prices .container .desc .group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
 
 .website-prices .container .desc h3{
     color: var(--text-color);

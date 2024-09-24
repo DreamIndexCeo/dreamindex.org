@@ -59,7 +59,7 @@ export default function ContactUs() {
 
           <div class="button-group">
             <input type="radio" id="7" name="subject" />
-            <label for="7">Cloud Portal Featuress</label>
+            <label for="7">Cloud Portal Features</label>
           </div>
 
           <div class="button-group">

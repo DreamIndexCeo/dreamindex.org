@@ -224,6 +224,7 @@ const Calendar = ({
           name={id}
           id="dateValue"
           value={selectedDate}
+          required
         />
       </div>
     );

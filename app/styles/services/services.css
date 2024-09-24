@@ -13,6 +13,9 @@ li {
 .blueSeperator {
   text-align: center;
 }
+.desc{
+  font-size: 1.4em;
+}
 .flexParagraph {
   display: flex;
   justify-content: center;
@@ -23,6 +26,9 @@ li {
   @media(max-width: 480px){
     max-width: 330px;
   }
+}
+.flexParagraph p{
+  font-size: 1.05em;
 }
 
 .gifParagraphContainer {

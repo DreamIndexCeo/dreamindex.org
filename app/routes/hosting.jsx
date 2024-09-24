@@ -41,11 +41,11 @@ export default function Services() {
                 <li>Standard Performance</li>
                 <li>24/7 Website Hosting</li>
                 <li>Domain Name</li>
-                <li>Wesbite Security</li>
+                <li>Website Security</li>
                 <li>9/5 Live Support</li>
               </ul>
             </p>
-            <p>*Fee $50 for wesbite changes</p>
+            <p>*Fee $50 for website changes</p>
           </div>
           <div className="advance priceContainer">
             <h3>ADVANCED</h3>
@@ -58,9 +58,9 @@ export default function Services() {
                 <li>Standard Performance</li>
                 <li>24/7 Website Hosting</li>
                 <li>Domain Name</li>
-                <li>Wesbite Security</li>
+                <li>Website Security</li>
                 <li>9/5 Live Support</li>
-                <li> + Web Editior (Desktop version)</li>
+                <li> + Web Editor (Desktop version)</li>
                 <li> + Database Hosting</li>
                 <li> + Appointment Manager</li>
               </ul>
@@ -77,9 +77,9 @@ export default function Services() {
                 <li>+ Increased Performance</li>
                 <li>24/7 Website Hosting</li>
                 <li>Domain Name</li>
-                <li>Wesbite Security</li>
+                <li>Website Security</li>
                 <li>+ 24/7 Live Support</li>
-                <li>+ Web Editior (Desktop version & App Version)</li>
+                <li>+ Web Editor (Desktop version & App Version)</li>
                 <li>Database Hosting</li>
                 <li>Appointment Manager</li>
                 <li>+ 1 Extra Website and Database hosting</li>

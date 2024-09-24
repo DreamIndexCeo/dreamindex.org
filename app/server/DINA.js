@@ -11,7 +11,7 @@ export async function NewClient(){
           author: {
             name: `*NEW MESSAGE*`,  // User's name as the author
           },
-          title: "A New Client Submission",  // Title of the ticket or subject
+          title: "A New Submission Has Been Made",  // Title of the ticket or subject
           description: `please check the admin Console at your earliest convince at https://admin.dreamindex.org/admissions to view the meeting date`,  // The main message body
           timestamp: new Date(),  // Timestamp of the message
           footer: {

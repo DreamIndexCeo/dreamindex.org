@@ -24,8 +24,12 @@ export default function Services() {
         <div className="flexParagraph">
           <p>
             Offering options for
-            <span style={{ color: "red" }}> Monthly Financing</span> to give
-            you more flexibility
+            <b style={{ color: "red" }}> Monthly Financing </b>
+            using, 
+            <b style={{ color: "red" }}> Klarna </b>
+            or a 
+            <b style={{ color: "red" }}>  Personal Financing Plan with 10% Interest </b> 
+            to give you more flexibility
           </p>
         </div>
       </section>

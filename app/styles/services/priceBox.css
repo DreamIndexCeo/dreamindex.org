@@ -16,6 +16,10 @@
   padding: 16px;
 }
 
+.priceBox .label{
+  font-size: 1.4em;
+}
+
 .priceBox p,
 .priceBox li {
   color: var(--color-grey);

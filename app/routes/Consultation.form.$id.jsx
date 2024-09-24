@@ -8,6 +8,8 @@ import { Calendar, ColorPicker } from '../components/index.js';
 
 import { useParams, useNavigate} from "@remix-run/react";
 
+
+
 export const meta = () => {
   return [{ title: "DreamIndex || consultation Form" }];
 };
@@ -43,125 +45,131 @@ export async function loader(){
 
 export async function action({request, params}){
   const formData = await request.formData(); //Getting form data
+  console.log("Form Data:", Object.fromEntries(formData)); // Logs the data received
   const id = params.id;
-  
-  if(id == "section1"){
 
-    const Data = Object.fromEntries(formData);
-    const id_Key = formData.get("id_Key");
 
-    const auth = await prisma.codes.findMany({ // Pulling the code query that matches the clients to see if its ablible 
-      where: {
-        AccessCode: id_Key,
-        Status: true
-      }
-    });
-
-    if (auth.length){ //if auth pulled a vaild query using the id_Key
-      return {Data};
-    }else {
-      return { error: 'Code Is Invaild!' }
-    }
-
-  } else if(id == "section2"){
-
-    const Data = Object.fromEntries(formData);
-    return {Data};
-
-  } else if(id == "section3"){
-
-    const Data = Object.fromEntries(formData);
-    return {Data};
-
-  } else if(id == "section4"){
-    console.log(formData.get("InfoData"))
-    const Info = JSON.parse(formData.get("InfoData"));
-
-    const id_Key = String(Info.Data.id_Key);
-
-    const fname = String(Info.Data.fname);
-    const lname = String(Info.Data.lname);
-    const fullName = fname+" "+lname;
-
-    const phone = String(Info.Data.phone);
-    const email = String(Info.Data.email);
-    const business = String(Info.Data.business);
+  if (formData){
     
+    if(id == "section1"){
 
-    const Vision = JSON.parse(formData.get("VisionData"));
-    const Style = JSON.parse(formData.get("StyleData"));
-    const Meeting = Object.fromEntries(formData);
-    delete Meeting.InfoData;
-    delete Meeting.VisionData;
-    delete Meeting.StyleData;
+      const Data = Object.fromEntries(formData);
+      const id_Key = formData.get("id_Key");
 
-    const questionObject = { ...Vision.Data, ...Style.Data, ...Meeting}
-    console.log("Questions:"+JSON.stringify(questionObject, null, 2));
+      const auth = await prisma.codes.findMany({ // Pulling the code query that matches the clients to see if its available 
+        where: {
+          AccessCode: id_Key,
+          Status: true
+        }
+      });
 
-    const time = String(formData.get("Desired time for your Meeting"));
-
-    const meetingDate = new Date(String(formData.get("Meeting"))); // seperating the meeting date str into seperate date components
-    let meetingMonth = meetingDate.getMonth()+1;
-    let meetingDay = meetingDate.getDate();
-    let meetingYear = meetingDate.getFullYear();
-    const Date2 = new Date();
-    let currentMonth = Date2.getMonth()+1;
-    let currentDay = Date2.getDate();
-    let currentYear = Date2.getFullYear();
-
-    const updateUser = await prisma.codes.updateMany({ // updating the code query to not be used again
-      where: {
-        AccessCode: id_Key
-      },
-      data: {
-        Status: false
+      if (auth.length){ //if auth pulled a valid query using the id_Key
+        return {Data};
+      }else {
+        return { error: 'Code Is Invalid!' }
       }
-    });
 
-    console.log("Access Code:", id_Key);
-    console.log("Full Name:", fullName);
-    console.log("Phone #:", phone);
-    console.log("Email:", email);
-    console.log("Business Name:", business);
-    console.log("questions:", JSON.stringify(questionObject, null, 2));
+    } else if(id == "section2"){
 
-    const createForm = await prisma.forms.create({ // creating a new query for the uploaded form data 
-      data: {
-        "accessCode": id_Key,
-        "Name": fullName,
-        "Phone": phone,
-        "Email": email,
-        "Business": business,
-        "Questions": {
-          ...questionObject
+      const Data = Object.fromEntries(formData);
+      return {Data};
+
+    } else if(id == "section3"){
+
+      const Data = Object.fromEntries(formData);
+      return {Data};
+
+    } else if(id == "section4"){
+      console.log(formData.get("InfoData"))
+      const Info = formData ? JSON.parse(formData.get("InfoData")) : {};
+
+      const id_Key = String(Info.Data.id_Key);
+
+      const fname = String(Info.Data.fname);
+      const lname = String(Info.Data.lname);
+      const fullName = fname+" "+lname;
+
+      const phone = String(Info.Data.phone);
+      const email = String(Info.Data.email);
+      const business = String(Info.Data.business);
+      
+
+      const Vision = JSON.parse(formData.get("VisionData"));
+      const Style = JSON.parse(formData.get("StyleData"));
+      const Meeting = Object.fromEntries(formData);
+      delete Meeting.InfoData;
+      delete Meeting.VisionData;
+      delete Meeting.StyleData;
+
+      const questionObject = { ...Vision.Data, ...Style.Data, ...Meeting}
+      console.log("Questions:"+JSON.stringify(questionObject, null, 2));
+
+      const time = String(formData.get("Desired time for your Meeting"));
+
+      const meetingDate = new Date(String(formData.get("Meeting"))); // separating the meeting date str into separate date components
+      let meetingMonth = meetingDate.getMonth()+1;
+      let meetingDay = meetingDate.getDate();
+      let meetingYear = meetingDate.getFullYear();
+      const Date2 = new Date();
+      let currentMonth = Date2.getMonth()+1;
+      let currentDay = Date2.getDate();
+      let currentYear = Date2.getFullYear();
+
+      const updateUser = await prisma.codes.updateMany({ // updating the code query to not be used again
+        where: {
+          AccessCode: id_Key
         },
-        "status": true
-      },
-    })
+        data: {
+          Status: false
+        }
+      });
 
-    const client = await prisma.admissions.create({
-      data: {
-        "business": business,
-        "email": email,
-        "name": fullName,
-        "phone": phone,
-        "BookedDate": {
-          "Month": meetingMonth,
-          "Day": meetingDay,
-          "Year": meetingYear
-        },
-        "MadeDate": {
-          "Month": currentMonth,
-          "Day": currentDay,
-          "Year": currentYear
-        },
-        "status": "Pending",
-        "BookedTime": time,
-        "FormCode": id_Key
-      }
-    });
+      console.log("Access Code:", id_Key);
+      console.log("Full Name:", fullName);
+      console.log("Phone #:", phone);
+      console.log("Email:", email);
+      console.log("Business Name:", business);
+      console.log("questions:", JSON.stringify(questionObject, null, 2));
 
-    return redirect("/route/consultation-form")
+      const createForm = await prisma.forms.create({ // creating a new query for the uploaded form data 
+        data: {
+          "accessCode": id_Key,
+          "Name": fullName,
+          "Phone": phone,
+          "Email": email,
+          "Business": business,
+          "Questions": {
+            ...questionObject
+          },
+          "status": true
+        },
+      })
+
+      const client = await prisma.admissions.create({
+        data: {
+          "business": business,
+          "email": email,
+          "name": fullName,
+          "phone": phone,
+          "BookedDate": {
+            "Month": meetingMonth,
+            "Day": meetingDay,
+            "Year": meetingYear
+          },
+          "MadeDate": {
+            "Month": currentMonth,
+            "Day": currentDay,
+            "Year": currentYear
+          },
+          "status": "Pending",
+          "BookedTime": time,
+          "FormCode": id_Key
+        }
+      });
+
+
+      return redirect("/route/consultation-form");
+    }
   }
 
 }
@@ -196,7 +204,7 @@ export default function ContactForm() {
     if (savedStyleData) {
       setStyleData(savedStyleData);
     }
-  }, []);
+  });
 
   useEffect(() => {
     if (actionData?.error) {
@@ -429,23 +437,23 @@ export default function ContactForm() {
                 <div className="radiogroup">
                 <div class="inputGroup">
                     <label class="inputLabel">
-                      What Category describes your wesbite?
+                      What Category describes your website?
                     </label>
                     <ul>
                       <li>
-                        <input type="radio" name="What Category describes your wesbite?" value="Contact Wesbsite"/>
-                        Contact Wesbsite
+                        <input type="radio" name="What Category describes your website?" value="Contact Website"/>
+                        Contact Website
                       </li>
                       <li>
-                        <input type="radio" name="What Category describes your wesbite?" value="Appointment Booking Website"/>
+                        <input type="radio" name="What Category describes your website?" value="Appointment Booking Website"/>
                         Appointment Booking Website
                       </li>
                       <li>
-                        <input type="radio" name="What Category describes your wesbite?" value="E-commerence Website" />
-                        E-commerence Website
+                        <input type="radio" name="What Category describes your website?" value="E-commerce Website" />
+                        E-commerce Website
                       </li>
                       <li>
-                        <input type="radio" name="What Category describes your wesbite?" value="Custom"/>
+                        <input type="radio" name="What Category describes your website?" value="Custom"/>
                         Custom
                       </li>
                     </ul>
@@ -478,7 +486,7 @@ export default function ContactForm() {
                       </li>
                       <li>
                         <input type="radio" name="Do you have a logo" value="Would like one made" />
-                        Would like one made
+                        I Would like one made
                       </li>
                     </ul>
                   </div>
