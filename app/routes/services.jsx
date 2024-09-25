@@ -41,8 +41,8 @@ export default function Services() {
           </div>
           <div className="businessMeeting">
             <p className="desc">
-              After Paying the consultation, you'll be able to fill out a
-              consolation form to give up front information about your vision.
+              After Paying for your consultation meeting, you'll be able to fill out a
+              consolation form to give upfront information about your vision.
             </p>
             <p className="desc">
               From there you'll be able to book the next available meeting date
@@ -61,9 +61,9 @@ export default function Services() {
               depending on your type of site.
             </p>
             <p className="desc">
-              During this waiting time you'll be getting updates and designs
-              concept from us to approve to your liking. So you can continue to
-              working hard on your business' ideas while we handle all your
+              During this waiting time, you'll be getting updates and designs
+              concept from us to approve to your liking. You can continue to
+              working hard on your business' ideas and get updates, while we handle all your
               website and designing problems.
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function Services() {
 
       <div>
         <section className="columnContainer starryBackground">
-          <h1>Addons</h1>
+          <h1>Add-Ons</h1>
 
           <div className="rowContainer">
             <AddOnCard addonName={"Priority Fee"} addOnPrice={"$250"} />
