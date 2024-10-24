@@ -25,7 +25,7 @@ export default function SubmittedPayment() {
           </div>
           <div style={{textAlign: "center" }}>
             <p>
-              (You will receive a text and email reminder a day before your
+              (You will receive a text and email reminder the morning of your
               Meeting)
             </p>
           </div>

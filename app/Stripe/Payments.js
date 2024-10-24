@@ -9,20 +9,6 @@ export async function retrievePaymentIntent( id ) {
     return await stripe.paymentIntents.retrieve(id)
 }
 
-export async function createPaymentIntent() {
-    return await stripe.paymentIntents.create({
-        amount: 15000,
-        currency: 'usd',
-        metadata: {
-            name: customerName,
-            description: customerDescription,
-        },
-        automatic_payment_methods: {
-            enabled: true
-        }
-    })
-} 
-
 
 
 
@@ -48,6 +34,6 @@ export async function createconsultationIntent() {
         },
         automatic_payment_methods: {
             enabled: true
-        }
+        },
     })
 }

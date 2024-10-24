@@ -1,8 +1,8 @@
 import { useNavigate, useParams, useLoaderData } from "@remix-run/react";
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import styles from "../styles/services/loader.css";
-import { FormLink } from "../server/SendEmail";
-import { NewClient } from "../server/DINA";
+import { FormLink } from "../utils/SendEmail";
+import { NewClient } from "../utils/DINA";
 import { useState, useEffect } from "react";
 import { parse } from 'cookie';
 

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "meeting-manager-439518",
+  "private_key_id": "e690804c8e2c6ec9903b9fded2a7b64005545330",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDklBZ0cMtNeO2o\n4rwO/fzY8+1Qd1AANf6wb9Ug5FdDSOTpHyGx3KBPwxsOANLNTLyYFnsklFQAZ2Q3\nw2bYUioISzAtHS2Zb8x6N7KJiFTYtK7b1ww9qq/TkgPhEDp12vF5rTshpSINmEd1\nvOfNUHY/t3dRsKfNrzK2Cb9uGafXbqXN5AdfhIEKfzKnkWy9aTl0LA0RgBhHbgjU\nRXbfULFHBV0q4N3XUpqY34a13QHyfM1ZWV2CNFzFF/pc+DDpSrZ7mhZojNHC7qGw\n112Qok8UjrLif/ilWfrxmcc3pLgYmhzCmfc8EjPgnDc9M4mPP0sHud2J5abEX3hL\nT4r+GiHFAgMBAAECggEAAuawqxISn01Na7S5zeroiz+VUucgxQMdoQZz8XK64Zsk\nPj04UHYymePDc4sMVRfucNogMZepKHqN3OAf09dyU+0FLVCbsPRCGrvOo7MIq9na\nbYBH1he7gZDuq0WcdSOuDiBMigguUkPZ7FZu24rafvaIjvXe1PWuf0ovLtBbWMwD\n+kaQb7y7v0Ka51570cnFR17BZtCM9bApsao/j2esza/p8DqfcCKpCj2WEbXfJD8j\n2Y/qoY7xVo8fa3VjBCgtU8hf9TnTYqxOmMWIGvaAwPQwvtF65C+wtEb7GwWjbw7h\nse0Md+YQxt8dz1SE9AhLj/9mw+hwVug6eEl9uZ50YQKBgQD6Dv1AR7p1Iq4M+ewA\nbCWI6xQmtW0NUxKibyHgdaZb7SHFSarzlfQCp3IwHb+c3sv3zMozvMCiowz4AiQD\nHlrkkQJ6Wq/gHsGDI12era2FSqdyK7luwgb/69Y8l1OxGdqzW5YraKszlBmxANfM\nIMucVA4hwC3G5wubsWv9WgygWQKBgQDqAnF793upyqfLYztukqMTl8tGVJRfw1Kq\nN9qEHXOcJiXwmHdy2tpie9oxM53XKQZNTNypKdp9x4p+FSYFjeDGaxWBF/Z8KtOJ\nsVJT8H7Q+RIAcx7lNm08Zu4kQyRiT3hVBqPGXR4JjRywsXRV6emufRWOFO9hgyl1\nZv8QWJg/TQKBgQDaJTtv2WNjjraSYXEuSSpRkOsKfdm99wvZouPF4j0YEv4UE5lM\nWTP/IL7wFPO1UXRVIFYB3pebCm1k6tEp21Bl989WmEi4V3xv/+lLZa5sCt2bL2Pc\nqO3cU4yZXVbIuIpfT/Xotq4sF/Z1wQuBa9bU8UtGzFXjIGqzD4vrAKTlOQKBgQDX\n8+lGvd0hlCPFTo5KPIjCTBMLlIJY3agr7d96jLNkJtBceFfDZrSiriltvnSrWvC1\n5Xi9pCI+cScds+aiuYv1kF0IBVUywVL2fu27CPX/Y9t5DsQ0Q0YLt/GNBWlOUIh7\n7uS06roNlmwjo5/4qSU+IbECrc877g8UiThZnWjjAQKBgQDnm5bFWhWwg4dzSYn+\ntDdlSxJogPifVIbW+J8bvsylxMtMs0l4XScuEr6ycXIY/11F7oMMt1b6Sq3c7uvH\nYr7eLP0veK5grkxyVi1HYJPXkDxXHZn9hUo8H2qbjw7i5nNSehXFvZP/ueZUSeCM\nrI9YmD95seD++jS8PJbtv2CcSA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "meeting-manager@meeting-manager-439518.iam.gserviceaccount.com",
+  "client_id": "112972292978366912441",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/meeting-manager%40meeting-manager-439518.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
