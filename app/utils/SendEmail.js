@@ -63,13 +63,19 @@ export async function FormLink(email) {
           <title>Thank You from Dream Index</title>
           <style>
             body { background-color: #000; color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-            .container { margin: 0 auto; padding: 20px; max-width: 600px; background: url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?fit=crop&w=600&h=600&q=80") no-repeat center center; background-size: cover; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+            .container { margin: 0 auto; padding: 20px; max-width: 600px; background: url("https://dreamindex.org/imgs/starry_background.png") center center; background-color: #000; background-size: cover; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
             .content { background-color: rgba(0,0,0,0.7); padding: 20px; border-radius: 10px; }
-            h1 { color: #ffd700; }
+            h1 { 
+              background: linear-gradient(to bottom, #e252d8 10%, #6ecbf5 100%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent; 
+            }
             p { color: #d3d3d3; line-height: 1.5; }
-            a { color: #ffd700; text-decoration: none; font-weight: bold; }
-            .button { display: inline-block; padding: 10px 20px; margin-top: 20px; background-color: #ffd700; color: #000; text-transform: uppercase; border-radius: 5px; text-decoration: none; }
-            .button:hover { background-color: #ffa500; }
+            a { text-decoration: none; font-weight: bold; }
+            .button { display: inline-block; padding: 10px 20px; margin-top: 20px; background: linear-gradient(to bottom, #e252d8 10%, #6ecbf5 100%); color: #000; text-transform: uppercase; border-radius: 5px; text-decoration: none; }
+            .button:hover { background: #e252d8; transition: all 1s ease;}
+            strong { font-size: x-large; color: #e252d8;}
           </style>
         </head>
         <body>
@@ -79,7 +85,7 @@ export async function FormLink(email) {
               <p>Dear Client,</p>
               <p>Thank you for choosing Dream Index as your method of web creation. We are thrilled to have you on board and look forward to creating something amazing together.</p>
               <p>To get started, please fill out our consultation form by clicking the link below:</p>
-              <p>Your access code is: <strong>${code}</strong>. Please enter this code in the form.</p>
+              <p>Your access code is: <strong>${code}</strong>. Please copy & enter this code in the form.</p>
               <p><a class="button" href="http://dreamindex.org/consultation/form/section1">Consultation Form</a></p>
               <p>If you have any questions, feel free to reply to this email. We are always here to help!</p>
               <p>Best Regards,<br>Dream Index Team</p>
