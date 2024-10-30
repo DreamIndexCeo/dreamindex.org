@@ -66,7 +66,7 @@ export default function Index() {
             <h4>Personalized websites, apps, and design services to reflect your vision and grow your brand.</h4>
           </div>
 
-          <Link to='/services'><button><h4>Get Started</h4></button></Link>
+          <Link to='/consultation/payment'><button><h4>Get Started</h4></button></Link>
         </div>
         
       </div>

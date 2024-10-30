@@ -11,6 +11,7 @@ import Cookies from 'universal-cookie';
 
 
 
+
 export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();

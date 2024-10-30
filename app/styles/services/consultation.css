@@ -19,6 +19,7 @@ section {
 
 
 .consultationContainer p,
+.consultationContainer p s,
 .consultationContainer li {
   color: var(--color-black);
   font-family: var(--font-righteous);
@@ -32,6 +33,13 @@ section {
   font-size: 24px;
   text-align: center;
 }
+.consultationContainer p s{
+  font-size: 20px;
+  text-align: center;
+  color: var(--color-grey);
+  background: linear-gradient(to left top, transparent 47.75%, red 49.5%, red 50.5%, transparent 52.25%);
+}
+
 
 .consultationList {
   display: flex;
@@ -95,10 +103,6 @@ input[type="radio"]:checked:after {
     background-color: var(--color-light-grey);
     padding: 24px 0px;
     max-width: 350px;
-  }
-
-  .columnContainer{
-    
   }
 
   .consultationContainer img{

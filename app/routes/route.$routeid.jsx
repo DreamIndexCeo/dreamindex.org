@@ -1,8 +1,8 @@
 import { useNavigate, useParams, useLoaderData } from "@remix-run/react";
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import styles from "../styles/services/loader.css";
-import { FormLink } from "../server/SendEmail";
-import { NewClient } from "../server/DINA";
+import { FormLink } from "../utils/SendEmail";
+import { NewClient } from "../utils/DINA";
 import { useState, useEffect } from "react";
 import { parse } from 'cookie';
 
@@ -17,13 +17,14 @@ export async function loader({ params, request  }){
     const cookieHeader = request.headers.get('Cookie');
     const cookies = cookieHeader ? parse(cookieHeader) : {};
     const email = cookies.email;
+    const business = cookies.business;
 
     //reading the params data to send a email
     if (params.routeid == "consultation-mail"){
         FormLink(email);
     }
     else if(params.routeid == "consultation-form"){
-        NewClient();
+        NewClient(business);
     }
     
 

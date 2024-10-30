@@ -10,7 +10,7 @@ import { useLoaderData } from '@remix-run/react'
 import {Elements} from '@stripe/react-stripe-js'
 import {loadStripe} from '@stripe/stripe-js'
 import CheckoutForm from "../components/deposit/CheckoutForm";
-import { createDepositIntent } from '../Stripe/Payments'
+import { createDepositIntent } from '../utils/Stripe/Payments'
 
 
 

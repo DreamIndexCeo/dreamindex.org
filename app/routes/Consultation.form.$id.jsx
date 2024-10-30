@@ -168,7 +168,11 @@ export async function action({request, params}){
       });
 
 
-      return redirect("/route/consultation-form");
+      return redirect("/route/consultation-form", {
+        headers:{
+          'Set-Cookie': `business=${business}; Path=/; HttpOnly; SameSite=Lax;`
+        }
+      });
     }
   }
 

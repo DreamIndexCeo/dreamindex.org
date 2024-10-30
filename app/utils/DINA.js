@@ -1,5 +1,5 @@
 
-export async function NewClient(){
+export async function NewClient(businessName){
 
     // Discord webhook URL (replace with your actual webhook URL)
     const webhookUrl = "https://discord.com/api/webhooks/1271133566394437755/49JxRkghMEbZvTMzA3oV9fduwKVJS8DcBQViRatdx8C8o4DlvqRP17PidQTzhg3z-iXu";
@@ -11,7 +11,7 @@ export async function NewClient(){
           author: {
             name: `*NEW MESSAGE*`,  // User's name as the author
           },
-          title: "A New Submission Has Been Made",  // Title of the ticket or subject
+          title: `A New Submission Has Been Made for ${businessName}`,  // Title of the ticket or subject
           description: `please check the admin Console at your earliest convince at https://admin.dreamindex.org/admissions to view the meeting date`,  // The main message body
           timestamp: new Date(),  // Timestamp of the message
           footer: {
