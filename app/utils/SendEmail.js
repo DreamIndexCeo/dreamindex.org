@@ -66,13 +66,10 @@ export async function FormLink(email) {
             .container { margin: 0 auto; padding: 20px; max-width: 600px; background: url("https://dreamindex.org/imgs/starry_background.png") center center; background-color: #000; background-size: cover; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
             .content { background-color: rgba(0,0,0,0.7); padding: 20px; border-radius: 10px; }
             h1 { 
-              background: linear-gradient(to bottom, #e252d8 10%, #6ecbf5 100%);
-              -webkit-background-clip: text;
-              background-clip: text;
-              -webkit-text-fill-color: transparent; 
+              color: #e252d8
             }
             p { color: #d3d3d3; line-height: 1.5; }
-            a { text-decoration: none; font-weight: bold; }
+            a { color: #000; text-decoration: none; font-weight: bold; }
             .button { display: inline-block; padding: 10px 20px; margin-top: 20px; background: linear-gradient(to bottom, #e252d8 10%, #6ecbf5 100%); color: #000; text-transform: uppercase; border-radius: 5px; text-decoration: none; }
             .button:hover { background: #e252d8; transition: all 1s ease;}
             strong { font-size: x-large; color: #e252d8;}
