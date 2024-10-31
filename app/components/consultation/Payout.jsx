@@ -110,7 +110,7 @@ export const Payout = ({
                         </button>
                     </section>
 
-                    <section>
+                    <section style={{visibility: Display}}>
                       <Form method="post">
                         <input
                           name='email'

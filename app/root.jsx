@@ -1,4 +1,5 @@
 import styles from "./styles/index/index.css";
+import new_styles from "./styles/index/home.css";
 import {
   Links,
   LiveReload,
@@ -44,5 +45,5 @@ export default function App() {
 }
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: "stylesheet", href: styles },{ rel: "stylesheet", href: new_styles }];
 }

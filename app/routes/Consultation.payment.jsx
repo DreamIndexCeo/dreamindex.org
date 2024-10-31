@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import style from "../styles/services/consultation.css";
-import checkout from "../styles/Checkout/Checkout.css";
+import checkout from "../styles/Checkout/Consultation.css";
 
 import { Link, Form } from "@remix-run/react";
 import { useLoaderData } from '@remix-run/react'

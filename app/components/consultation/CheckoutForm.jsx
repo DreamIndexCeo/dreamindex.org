@@ -6,7 +6,7 @@ import {
   useElements
 } from "@stripe/react-stripe-js";
 
-import '../../styles/Checkout/Checkout.css';
+import '../../styles/Checkout/Consultation.css';
 import Cookies from 'universal-cookie';
 
 

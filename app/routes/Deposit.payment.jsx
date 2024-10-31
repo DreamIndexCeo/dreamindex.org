@@ -2,175 +2,117 @@ import React, { useState } from 'react';
 
 import NavBar, { links as navBarLinks } from "../components/index/NavBar";
 import style from "../styles/services/deposit.css";
-import checkout from "../styles/Checkout/Checkout.css";
+import checkout from "../styles/Checkout/Deposit.css";
 
 import { Link, Form } from "@remix-run/react";
 
 import { useLoaderData } from '@remix-run/react'
-import {Elements} from '@stripe/react-stripe-js'
-import {loadStripe} from '@stripe/stripe-js'
-import CheckoutForm from "../components/deposit/CheckoutForm";
-import { createDepositIntent } from '../utils/Stripe/Payments'
 
 
+import { loadStripe } from '@stripe/stripe-js'
+import { createDepositIntent } from '../utils/Stripe/Payments';
+import { Payout } from '../components/deposit/Payout';
+import { json } from "@remix-run/node";
 
-const stripePromise = loadStripe("pk_test_51MXaWBCKNPKPb8n38xxkaoAPVYcyIfOYd3ptoKvH8LEIdVZnEDraz0mNIY00r73pRmMOcQMxokgYUTGxtHphc6iI00qh7aRKxE");
+export async function loader() {
+ // Only use the secret key on the server to create the payment intent
+  const consultation_int = await createDepositIntent();
 
-export async function loader(){
-    return await createDepositIntent()
+  // Use the public key to load Stripe on the client
+  const STRIPE_PUBLIC_KEY = process.env.STRIPE_PUBLIC_KEY;
+
+  return json({
+    paymentIntent: consultation_int,
+    publicKey: STRIPE_PUBLIC_KEY,
+  });
 }
-
-
     
 export default function Deposit() {
-  const paymentIntent = useLoaderData();
 
-  const appearance = {
-    theme: 'flat',
-    variables: {
-      fontFamily: 'Verdana',
-      fontLineHeight: '1.5',
-      borderRadius: '0',
-      colorBackground: '#fff',
-      focusBoxShadow: 'none',
-      focusOutline: '-webkit-focus-ring-color auto 1px',
-      tabIconSelectedColor: 'var(--colorText)'
-    },
-    rules: {
-      '.Input, .CheckboxInput, .CodeInput': {
-        transition: 'none',
-        boxShadow: 'inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080'
-      },
-      '.Input': {
-        padding: '12px'
-      },
-      '.Input--invalid': {
-        color: '#DF1B41'
-      },
-      '.Tab, .Block, .PickerItem--selected': {
-        backgroundColor: '#dfdfdf',
-        boxShadow: 'inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf'
-      },
-      '.Tab': {
-        transition: 'none'
-      },
-      '.Tab:hover': {
-        backgroundColor: '#eee'
-      },
-      '.Tab--selected, .Tab--selected:focus, .Tab--selected:hover': {
-        color: 'var(--colorText)',
-        backgroundColor: '#ccc'
-      },
-      '.Tab:focus, .Tab--selected:focus': {
-        boxShadow: 'inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf',
-        outline: 'none'
-      },
-      '.Tab:focus-visible': {
-        outline: 'var(--focusOutline)'
-      },
-      '.PickerItem': {
-        backgroundColor: '#dfdfdf',
-        boxShadow: 'inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf',
-        transition: 'none'
-      },
-      '.PickerItem:hover': {
-        backgroundColor: '#eee'
-      },
-      '.PickerItem--highlight': {
-        outline: '1px solid blue'
-      },
-      '.PickerItem--selected:hover': {
-        backgroundColor: '#dfdfdf'
-      }
-    }
-  };
+     // Get paymentIntent and publicKey from loader
+     const { paymentIntent, publicKey } = useLoaderData();
+
+     // Load Stripe with the public key
+     const stripePromise = loadStripe(publicKey);
   
-  const options = {
-      clientSecret: paymentIntent.client_secret,
-      appearance,
-  };
-
-
-  const [Display, setDisplay] = useState("hidden");
   return (
     <body>
-      <NavBar />
-      <div className="columnContainer">
-        <section>
-          <h1 className="gradientTitle">Start Your Dream Website Creation</h1>
-        </section>
 
-          <section>
-            <div className="depositContainer">
-              <div className="columnContainer">
-                <img src="../imgs/pay_bill.gif" />
-                <p style={{ fontSize: "31px" }}>Deposit Fee</p>
-                <p>$150</p>
-                <span className="smallDivider"></span>
-                <p className="depositFeeP">
-                  To begin the website creation we need to take a Deposit, that
-                  will be subtracted from the final price.
-                </p>
+      <section className='col gap'>
+        <h1>Deposit Fee</h1>
+
+        <div className='row gap'>
+
+          <div className='col gap'>
+            <div className='container'>
+              <div>
+                <h3>Invoice form Dream Index</h3>
+                <p className='price'>$150.00</p>
+                <h3>Due November 30, 2024</h3>
               </div>
-              <div className="howdYouFindUS">
-                <p style={{ textAlign: "left" }}>How did you find us ?</p>
-                <div className="depositList">
-                  <ul>
-                    <li>
-                      <input name="marketing" value="Instagram" type="radio" />
-                      Instagram
-                    </li>
-                    <li>
-                      <input name="marketing" value="Youtube" type="radio" />
-                      Youtube
-                    </li>
-                    <li>
-                      <input name="marketing" value="Facebook" type="radio" />
-                      Facebook
-                    </li>
-                    <li>
-                      <input name="marketing" value="TikTok" type="radio" />
-                      TikTok
-                    </li>
-                  </ul>
 
-                  <ul>
-                    <li>
-                      <input name="marketing" value="Marketing Team" type="radio" />
-                      Marketing Team
-                    </li>
-                    <li>
-                      <input name="marketing" value="Google Ads" type="radio" />
-                      Google Ads
-                    </li>
-                    <li>
-                      <input name="marketing" value="A friend" type="radio" />
-                      A friend
-                    </li>
-                    <li>
-                      <input name="marketing" value="Other" type="radio" />
-                      Other
-                    </li>
-                  </ul>
+              <line></line>
+
+              <div className='row'>
+                <p>Download Invoice</p>
+              </div>
+
+              <div className='text-row1'>
+                <div className='col'>
+                  <p>To</p>
+                  <p>From</p>
+                </div>
+                <div className='col'>
+                  <p>Customer</p>
+                  <p>Dream Index LLC</p>
                 </div>
               </div>
+
             </div>
-          </section>
+            <div className='container'>
+              <h3>Invoice #EXAMPLE-0001</h3>
 
-          <section>
-            <button className="button" onClick={() => { setDisplay("visible") }}>
-              Continue
-              <img src="../imgs/card.png" />
-            </button>
-          </section>
+              <line className='full'></line>
 
-          <section style={{visibility: Display}}> 
-            <Elements stripe={stripePromise} options={options}>
-              <CheckoutForm />
-            </Elements>
-          </section>
+              <div className='text-row2'>
+                <p>Total due</p>
+                <p>$150.00</p>
+              </div>
 
-      </div>
+              <line className='full'></line>
+              <div>
+                <div className='text-row2'>
+                  <p>Amount Paid</p>
+                  <p>$0.00</p>
+                </div>
+                <div className='text-row2'>
+                  <p>Amount Remaining</p>
+                  <p>$150.00</p>
+                </div>
+              </div>
+              
+              <line className='full'></line>
+
+              <p className='bottom'>Questions? Contact us at <b>Contact@dreamindex.org</b> or call us at <b>+1 475-422-544</b></p>
+            </div>
+          </div>
+
+          <div className='col gap'>
+            <div className='container'>
+              <div>
+                <h3>Description:</h3>
+                <p style={{color: '#000'}}>This deposit fee will be used to begin your website development process and will be deducted from your final price when the final payment is needed.</p>
+              </div>
+
+              <line className='full'></line>
+
+              <Payout stripePromise={stripePromise} paymentIntent={paymentIntent}/>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </body>
   );
 }
