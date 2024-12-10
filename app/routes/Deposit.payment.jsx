@@ -6,7 +6,7 @@ import checkout from "../styles/Checkout/Deposit.css";
 
 import { Link, Form } from "@remix-run/react";
 
-import { useLoaderData } from '@remix-run/react'
+import { useNavigate, useParams, useLoaderData, useActionData } from "@remix-run/react";
 
 
 import { loadStripe } from '@stripe/stripe-js'
@@ -15,22 +15,33 @@ import { Payout } from '../components/deposit/Payout';
 import { json } from "@remix-run/node";
 
 export async function loader() {
- // Only use the secret key on the server to create the payment intent
-  const consultation_int = await createDepositIntent();
 
   // Use the public key to load Stripe on the client
   const STRIPE_PUBLIC_KEY = process.env.STRIPE_PUBLIC_KEY;
 
-  return json({
-    paymentIntent: consultation_int,
+  return ({
     publicKey: STRIPE_PUBLIC_KEY,
+  });
+}
+
+export async function action({ request }) {
+
+  const formData = await request.formData();
+  const stripeInvoice = formData.get("invoice");
+
+  return json({ 
+    invoiceKey: stripeInvoice
   });
 }
     
 export default function Deposit() {
 
      // Get paymentIntent and publicKey from loader
-     const { paymentIntent, publicKey } = useLoaderData();
+     const { publicKey } = useLoaderData();
+     // Get invoiceKey from action
+     const { invoiceKey } = useActionData();
+
+     const navigate = useNavigate();
 
      // Load Stripe with the public key
      const stripePromise = loadStripe(publicKey);
@@ -106,7 +117,7 @@ export default function Deposit() {
 
               <line className='full'></line>
 
-              <Payout stripePromise={stripePromise} paymentIntent={paymentIntent}/>
+              <Payout stripePromise={stripePromise} paymentIntent={invoiceKey}/>
             </div>
           </div>
 
