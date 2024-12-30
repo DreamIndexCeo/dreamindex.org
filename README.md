@@ -13,3 +13,6 @@ npm run build
 ```sh
 npm start
 ```
+
+
+## Testing
