@@ -56,19 +56,16 @@ export default function route(){
     const { item } = useLoaderData();
     const fetcher = useFetcher();
 
+
     useEffect(() => {
-        setTimeout(() => {
+        setTimeout(async() => {
             if (taskid.routeid == "consultation-mail"){
                 navigate("/consultation/success");
             } else if (taskid.routeid == "consultation-form"){
                 localStorage.clear();
                 navigate("/consultation/submitted");
             } else if (taskid.routeid == "deposit"){
-                fetcher.submit(
-                    { invoice: item },
-                    { method: 'post', action: '/deposit/payment' }
-                  )
-
+                navigate(`/deposit/payment/${item}`);
             }
         }, 2500);
     }, []);

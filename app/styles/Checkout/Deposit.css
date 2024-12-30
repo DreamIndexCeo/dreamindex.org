@@ -7,6 +7,10 @@ form {
     align-self: center;
     border-radius: 7px;
     padding: 0px 40px;
+    @media(max-width: 480px){
+      padding: 0px;
+      min-width: initial;
+    }
   }
   
   #email {

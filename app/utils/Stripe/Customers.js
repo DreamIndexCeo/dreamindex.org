@@ -21,7 +21,7 @@ export async function createCustomer(id){
     })
 
     // show query response
-    console.log(verify.data)
+    //console.log(verify.data)
 
     if (!verify.data.length){
         // create a new customer

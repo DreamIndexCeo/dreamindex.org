@@ -16,22 +16,65 @@ export async function depositInvoice(id){
   }
 
   try{
-    // Create an invoice item
-    await stripe.invoiceItems.create({
-      customer: id,
-      price: priceID,
-    });
+    
 
     // Create an invoice
     const invoice = await stripe.invoices.create({
       customer: id,
-      description: 'Deposit fee for website Development.',
+      description: "This deposit fee will be used to begin your website development process and will be deducted from your final price when the final payment is needed.",
+      collection_method: 'send_invoice', // Requires the customer to pay manually
+      days_until_due: 30,
     });
 
-    return invoice
+    // Create an invoice item
+    const invoiceItem = await stripe.invoiceItems.create({
+      customer: id,
+      price: priceID,
+      invoice: invoice.id
+    });
+
+    // finalize invoice 
+    const finalizedInvoice = await stripe.invoices.finalizeInvoice(invoice.id);
+
+    console.log(`Customer created: ${id}`);
+    console.log(`Invoice item created: ${invoiceItem.id}`);
+    console.log(`Invoice created: ${invoice.id}`);
+    console.log(`Invoice finalized: ${finalizedInvoice.id}`);
+    console.log(`Invoice URL: ${finalizedInvoice.hosted_invoice_url}`);
+
+    return finalizedInvoice.id
   }catch(err){
     console.log(err);
   }
+}
 
+export async function getInvoice(id){
+  try{
+    // Retrieve the invoice to get the amount due
+    const invoice = await stripe.invoices.retrieve(id);
+
+    return invoice;
+
+  }catch(err){
+    console.log(err);
+  }
+  
+}
+
+export async function invoice_PI(invoice, id){
+
+  try{
+    //Create the payment intent for the amount due
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: invoice.amount_due,
+      currency: invoice.currency,
+      customer: invoice.customer,
+      metadata: { id },
+    });
+
+    return paymentIntent;
+  } catch (err){
+    console.log(err)
+  }
   
 }
